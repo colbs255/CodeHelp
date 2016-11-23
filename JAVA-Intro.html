@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Java</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="JS-navBar.js"></script>
+    <link rel="stylesheet" type="text/css" href="CSS-main.css">
+</head>
+<body>
+    <div class="jumbotron" id="jumbo">
+        <h1 class = "mainTitle" id="titleMain">Java</h1>
+    </div>
+    
+    <nav class="navbar navbar-inverse absBar" id="myBar">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myCollapseBar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+                <a class="navbar-brand" href="index.html">CodeHelp</a>
+          </div>
+          <div class="navbar-collapse collapse" id="myCollapseBar">
+            <ul class="nav navbar-nav">
+              <li class="active"><a href="JAVA-Intro.html">Java</a></li>
+              <li><a href="PYTHON-Intro.html">Python</a></li>
+              <li><a href="WEBDESIGN-Intro.html">HTML/CSS/JS</a></li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+      </nav>
+    
+    <div class="placeHolder"></div>
+
+    
+    <div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-2" id="mySideBar">
+            <nav class="navbar navbar-default" roll="navigation">
+                <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle navbar-default" data-toggle="collapse" data-target="#mySideCollapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    </button>
+                    <h3>Java Lessons</h3>
+                </div>
+                <div class="nav-pills brand-pills nav-stacked collapse navbar-collapse" id="mySideCollapse">
+                    <ul class="nav">
+                    <li class="active"><a>Introduction to Java</a></li>
+                    <li><a>Hello World</a></li>
+                    <li><a>Variables</a></li>
+                    <li><a>Print/Input</a></li>
+                    <li><a>Math Functions</a></li>
+                    <li><a>Control Statements</a></li>
+                    <li><a>Loops</a></li>
+                    <li><a>Arrays</a></li>
+                    <li><a>Methods</a></li>
+                    <li><a>Classes and Objects</a></li>
+                    <li><a>Math Functions</a></li>
+                    <li><a>Control Statements</a></li>
+                    </ul>
+                </div>
+                </div>
+            </nav>
+    </div>
+        <div class="col-sm-10">
+        <h1 class="pageTitle">Introduction to Java</h1>
+        <h3>How Java Works</h3>
+    
+        <p>You have probably heard by now that Java works on just about any device. This is because Java works on a virtual machine, which is essentially a program that translates the code to run on your specific device. Activating a Java program essentially requires two steps: compiling and running. After you write the code, you compile it. This means that the computer is translating the human-readable code into byte code that your device can read. Then you just run the byte code file with the virtual machine. If this does not make sense to you now, that is okay because the whole process only requires two commands and it is not essential to understand it when you start programming.</p>
+
+        <h3>What you need</h3>
+    
+        <p>If you only wanted to run a Java program, you would only need a Java Runtime environment (JRE), and most computers already have this. If you want to program in Java then you need a Java Developing Kit (JDK) and this includes a JRE. Just go to the <a href="http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html">Oracle JDK</a> website to download the JDK that corresponds to your system. You should also get a text editor or an Integrated Development Environment (IDE) to actually write the code. Text editors are very light-weight, fast, and versatile. An IDE is basically a high powered text editor that can compile and run the program for you, and they will automatically find errors in your code and suggest how to fix them. You decide what is best for you, a text editor will require you to figure out every mistake for yourself and you will probably understand the language faster, but it will be more frustrating and not as efficient for writing code in general. Many college professors only allow text editors when you are learning how to program because they require you to find your own errors and understand what you are doing. I would recommend starting with a text editor and then moving on to an IDE when you are more comfortable with the language. The best text editors are <a href="https://www.sublimetext.com/">Sublime</a> and <a href="https://atom.io/">Atom</a> (do not just use Notepad on windows or textEdit on mac, they are not optimized for programming) and the best Java IDEs are <a href="https://eclipse.org/">Eclipse</a> and <a href="https://www.jetbrains.com/idea/">IntelliJ</a> (I prefer IntelliJ). You can google one of these and you will find the downloads page with instructions.</p>
+        
+            
+        <ul class="pager">
+            <li class="previous"><a href="#"><span class="glyphicon glyphicon-menu-left"></span>Previous</a></li>
+            <li class="next"><a href="#">Next<span class="glyphicon glyphicon-menu-right"></span></a></li>
+        </ul>    
+        </div>
+    </div>
+    </div>
+    
+    <footer>
+        <p>Colby Chance 2016</p>
+      </footer>
+    
+</body>
+</html>
