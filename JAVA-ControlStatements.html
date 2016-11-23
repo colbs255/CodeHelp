@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Java</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="JS-navBar.js"></script>
+    <link rel="stylesheet" type="text/css" href="CSS-main.css">
+</head>
+<body>
+    <div class="jumbotron" id="jumbo">
+        <h1 class = "mainTitle" id="titleMain">Java</h1>
+    </div>
+    
+    <nav class="navbar navbar-inverse absBar" id="myBar">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myCollapseBar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+                <a class="navbar-brand" href="index.html">CodeHelp</a>
+          </div>
+          <div class="navbar-collapse collapse" id="myCollapseBar">
+            <ul class="nav navbar-nav">
+              <li class="active"><a href="JAVA-Intro.html">Java</a></li>
+              <li><a href="PYTHON-Intro.html">Python</a></li>
+              <li><a href="WEBDESIGN-Intro.html">HTML/CSS/JS</a></li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+      </nav>
+    
+    <div class="placeHolder"></div>
+
+    
+    <div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-2" id="mySideBar">
+            <nav class="navbar navbar-default" roll="navigation">
+                <div class="container-fluid" id="sideNavPadFixed">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle navbar-default" data-toggle="collapse" data-target="#mySideCollapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" id="sideBarTitle">Java Lessons</a>
+                </div>
+                <div class="nav-pills brand-pills nav-stacked collapse navbar-collapse" id="mySideCollapse">
+                    <ul class="nav">
+                    <li class="active"><a href="JAVA-Intro.html">Introduction to Java</a></li>
+                    <li><a href="JAVA-HelloWorld.html">Hello World</a></li>
+                    <li><a href="JAVA-Variables.html">Variables</a></li>
+                    <li><a href="JAVA-PrintInput.html">Print/Input</a></li>
+                    <li><a href="JAVA-MathFunctions.html">Math Functions</a></li>
+                    <li><a href="JAVA-ControlStatements.html">Control Statements</a></li>
+                    <li><a href="JAVA-Loops.html">Loops</a></li>
+                    <li><a href="JAVA-Arrays.html">Arrays</a></li>
+                    <li><a href="JAVA-Methods.html">Methods</a></li>
+                    <li><a href="JAVA-Conventions.html">Conventions</a></li>
+                    <li><a href="JAVA-Modifiers.html">Modifiers</a></li>
+                    <li><a href="JAVA-ClassesObjects.html">Classes and Objects</a></li>
+                    </ul>
+                </div>
+                </div>
+            </nav>
+    </div>
+        <div class="col-sm-10">
+        <h1 class="pageTitle">Control Statements</h1>
+    
+        <p>You have already learned how to command the computer, and now you will learn how to let the computer make decisions for itself with control statements. It isn’t artificial intelligence, but it’s still pretty cool, and you will use these in just about every program you write.</p>
+
+        <h3>if statement</h3>
+    
+        <p>The if statement works the way you would expect. It says if this condition is true, then do this. Here’s what an if statement generally looks like.</p>
+        <pre>if (yourCondition) {
+    //do the code inside the curly brackets
+}
+</pre>
+        <p>Here's an example</p>
+        <pre>int x = 5;
+if (x >= 5) {
+    System.out.println("X is greater than or equal to 5");
+}
+</pre>
+        <p>The computer looks inside of the parentheses and evaluates if x is greater than or equal to 5. Since x is equal to 5, the program will print “X is greater than or equal to 5”.</p>
+            
+        <p>The if statement also works great with booleans. Heres an example</p>
+        <pre>boolean hasGlasses = false;
+if (hasGlasses) {
+    System.out.println("Martha has glasses");
+}
+</pre>
+            
+        <p>The statement will evaluate if the boolean hasGlasses is set to true. Since the statement is set to false, the code inside the curly brackets will not do anything.</p>
+        
+        <h3>if and else</h3>
+        <p>a)	In the case that your test condition is not true, you can use an else statement to do something “else”. For example,</p>
+            
+        <pre>int x = 5;
+if (x == 4) {
+    System.out.println("X is equal to 4");
+} else {
+    System.out.println("I don't know what x is... but I know it's not 4.");
+}
+</pre>
+            
+        <p>The == operator tests if 2 variables are equal. Whenever you want to see if something is equal, use ==. <b>DO NOT USE =</b>. The = is the assignment operator. It is only used to set something equal to something else. This program checks if x is equal to 4. Since it does not equal 4, it will run the code in the else statement.</p>
+            
+        <h3>else if</h3>
+        <p>if and else statements are great if you only have 2 outcomes, but if you have more than one outcome then you’ll need an “else if” statement. You essentially chain else if statements onto an if statement to check several conditions so your code can respond to different possibilities. Here is an example:</p>
+        <pre>int age = 19;
+if (age &lt= 3) {
+    System.out.println("You are a toddler");
+} else if (age &lt= 12) {
+    System.out.println("You are a kid");
+} else if (age &lt= 17) {
+    System.out.println("You are a teen");
+} else {
+    System.out.println("You are an adult.");
+}
+</pre>
+        <p>The code will start with if statement and if true, then it will run the code inside the first curly brackets. If it is not true, then it will move on to the next condition and will repeat this process until it either reaches a condition that is true or it reaches the else statement. In this case, the code in the else statement will execute since 19 is not true for any of the conditions</p>
+            
+        <h3>Switch Statements</h3>
+        <p>Switch statements are roughly the same as else if statements in a different format. They are often used when you provide a user with a list of options to pick from. Here is an example:</p>
+        <pre>Scanner input = new Scanner(System.in);
+System.out.println("1. Iron Man");
+System.out.println("2. Thor");
+System.out.println("3. Hulk");
+System.out.println("4. Black Panther");
+System.out.println("Which character would you like to play as? Enter a number.");
+int choice = input.nextInt();
+
+switch (choice) {
+    case 1: System.out.println("You are Iron Man");
+    break;
+    case 2: System.out.println("You are Thor");
+    break;
+    case 3: System.out.println("You are Hulk");
+    break;
+    case 4: System.out.println("You are Black Panther");
+    break;
+    default: System.out.println("You did not pick a valid choice.");
+    System.out.printnl("You were defaulted to Ant Man");
+    break;
+}
+
+</pre>
+        <p>In this code, the user is given a list of super heroes to play as and must enter a number to pick. The switch statement takes in this variable and matches it with the numbers in the following statements. If none of the numbers match, then the default case will run. You must put break at the end of each case, and you can put multiple statements in each case.</p>
+            
+        <h3>&& and || operators</h3>
+        <p>Let’s say you only want a block of code to run when 2 conditions are true. You might be tempted to write something like this</p>
+            <pre>boolean canFly = true;
+boolean hasSuperStrength = true;
+if (canFly) {
+    if (hasSuperStrength) {
+    System.out.println("You are superman.");
+    }
+}
+</pre>
+        <p>a)	This code is totally valid, but it is not easy to read, and there is a much simpler way. Take a look at this:</p>
+        <pre>boolean canFly = true;
+boolean hasSuperStrength = true;
+if (canFly && hasSuperSpeed) {
+    System.out.println("You are superman.");
+}
+</pre>
+        <p>This is easier to read, easier to write, easier for the machine to run, and essentially equivalent to what was coded above. The <code>&&</code> is the and operator, so if we translate this code to English, it would be like: “If canFly is true and if and only if hasSuperStrength is also true, then print "You are superman." Remember that the block of code will only be called if both of these conditions are true. If one of them is false, then the following code will be skipped.</p>
+        <p>Let’s say you want a block of code to run if either one of 2 conditions are true. You might want to write this:</p>
+        <pre>boolean canFly = true;
+boolean hasSuperStrength = true;
+if (canFly) {
+    System.out.println("You have super powers.");
+}
+if (hasSuperStrength) {
+    System.out.println("You have super powers.");
+}
+</pre>
+        <p>This code is alright, but if both of the variables are true then the same statement will be printed out twice. Here is another trick:</p>
+        <pre>if (canFly || hasSuperStrength) {
+    System.out.println("You have super powers.");
+}
+</pre>
+        <p>Once again, this is simpler and better. The <code>||</code> is the or operator, so in English this code says “If canFly is true or if hasSuperStrength is true, then you have super powers.” It will also print the statement at most one time, so there is no redundancy.</p>
+        <p>If you ever find yourself writing a bunch of if statements or if statements nested inside of other if statements. Think about using one of these operators.</p>
+            
+        <h3>if vs else if vs switch</h3>
+        <p>It is important that you know the differences between each of these so you know when to use them.</p>
+        <p>Why would you use an else if when you could just use multiple if statements?</p>
+        <p>Answer: When you create an else if chain, code will only run in one of those else if segments. If you did multiple if statements then there’s a possibility that all of those statements can be true and run their respective code, so you need to figure out if you only want one thing to happen or potentially more.</p>
+        <p>Why use a switch statement instead of an else if chain?</p>
+        <p>Answer: Switch statements are good for when the user has relatively few choices and you want something to happen only when the user’s choice equals something specific. Else if chains are good when for when the user has many options and you want the code to run when the user picks a choice in a certain range.</p>
+            
+        <h3>Challenge</h3>
+        <p>Write a program that will print what kind of shape something is based off of these booleans: has4Sides, allSidesEqualLength, and allCorners90Degrees. The possible shapes are square, rectangle, other quadrilateral, or not a quadrilateral. Only print one of these in your option, not more than one. Hint: A square has 4 sides, all sides are equal length, and all corners are 90 degrees. A rectangle has 4 sides and all corners are 90 degrees. A shape is a quadrilateral if it has 4 sides.</p>
+        <p>Answer</p>
+            <pre>if (has4Sides && allSidesEqualLength && allConers90Degrees) {
+    System.out.println("Square");
+} else if (has4Sides && allCorners90Degrees) {
+    System.out.println("Rectangle");
+} else if (has4Sides) {
+    System.out.println("Other Quadrillateral");
+} else {
+    System.out.println("Not a quadralliteral");
+}
+
+</pre>
+        <p>There are many ways to do this, but this is one of the simplest ways. Notice how the code tests for the most specific case first, and then tests for more general cases as it goes down; you generally want to use this strategy for efficient code.</p>
+            
+        <ul class="pager">
+            <li class="previous"><a href="#"><span class="glyphicon glyphicon-menu-left"></span>Previous</a></li>
+            <li class="next"><a href="#">Next<span class="glyphicon glyphicon-menu-right"></span></a></li>
+        </ul>    
+        </div>
+    </div>
+    </div>
+    
+    <footer>
+        <p>Colby Chance 2016</p>
+      </footer>
+    
+</body>
+</html>
