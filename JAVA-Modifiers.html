@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Java</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="JS-navBar.js"></script>
+    <link rel="stylesheet" type="text/css" href="CSS-main.css">
+</head>
+<body>
+    <div class="jumbotron" id="jumbo">
+        <h1 class = "mainTitle" id="titleMain">Java</h1>
+    </div>
+    
+    <nav class="navbar navbar-inverse absBar" id="myBar">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myCollapseBar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+                <a class="navbar-brand" href="index.html">CodeHelp</a>
+          </div>
+          <div class="navbar-collapse collapse" id="myCollapseBar">
+            <ul class="nav navbar-nav">
+              <li class="active"><a href="JAVA-Intro.html">Java</a></li>
+              <li><a href="PYTHON-Intro.html">Python</a></li>
+              <li><a href="WEBDESIGN-Intro.html">HTML/CSS/JS</a></li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+      </nav>
+    
+    <div class="placeHolder"></div>
+
+    
+    <div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-2" id="mySideBar">
+            <nav class="navbar navbar-default" roll="navigation">
+                <div class="container-fluid" id="sideNavPadFixed">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle navbar-default" data-toggle="collapse" data-target="#mySideCollapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" id="sideBarTitle">Java Lessons</a>
+                </div>
+                <div class="nav-pills brand-pills nav-stacked collapse navbar-collapse" id="mySideCollapse">
+                    <ul class="nav">
+                    <li class="active"><a href="JAVA-Intro.html">Introduction to Java</a></li>
+                    <li><a href="JAVA-HelloWorld.html">Hello World</a></li>
+                    <li><a href="JAVA-Variables.html">Variables</a></li>
+                    <li><a href="JAVA-PrintInput.html">Print/Input</a></li>
+                    <li><a href="JAVA-MathFunctions.html">Math Functions</a></li>
+                    <li><a href="JAVA-ControlStatements.html">Control Statements</a></li>
+                    <li><a href="JAVA-Loops.html">Loops</a></li>
+                    <li><a href="JAVA-Arrays.html">Arrays</a></li>
+                    <li><a href="JAVA-Methods.html">Methods</a></li>
+                    <li><a href="JAVA-Conventions.html">Conventions</a></li>
+                    <li><a href="JAVA-Modifiers.html">Modifiers</a></li>
+                    <li><a href="JAVA-ClassesObjects.html">Classes and Objects</a></li>
+                    </ul>
+                </div>
+                </div>
+            </nav>
+    </div>
+        <div class="col-sm-10">
+        <h1 class="pageTitle">Modifiers</h1>
+    
+        <p>Modifier words are the special keywords that are typed before methods, variables, and classes. These include words like: public, private, final, and static. In this lesson, you’ll learn what all of these mean.</p>
+
+        <h3>Access Modifiers</h3>
+    
+        <p>Public and private are access modifiers. Access modifiers determine what classes can access these variables or methods. By default, methods and variables are visible by other classes that belong in the same package (packaging is just a way of organizing Java classes). Public means that all classes no matter their package can access your method or variable. Private means that the method or variable can only be accessed by things within the same class. Generally, variables within methods can be set to default (no access modifier), global variables should be private, and methods should be public. This is so people can’t interfere with the variables of your class unless they use one of the methods that you specifically designed. There is also another access modifier called “protected” that isn’t used as often. Protected is the same as default except all classes that extend the class can access the variable, even if the subclass is from a different package. We will get into inheritance soon, so don’t worry if you didn’t understand that.</p>
+            
+        <h3>Final</h3>
+        <p>The final keyword means the variable can’t be changed. If you declare a variable as final, and try to change its value later then an error will occur.</p>
+            
+        <h3>Static</h3>
+        <p>Static means something belongs to the class itself, and you do not use objects to access them. The methods in your classes have been static so far because you have not learned how to make objects yet, which you will soon.</p>
+        
+            
+        <ul class="pager">
+            <li class="previous"><a href="#"><span class="glyphicon glyphicon-menu-left"></span>Previous</a></li>
+            <li class="next"><a href="#">Next<span class="glyphicon glyphicon-menu-right"></span></a></li>
+        </ul>    
+        </div>
+    </div>
+    </div>
+    
+    <footer>
+        <p>Colby Chance 2016</p>
+      </footer>
+    
+</body>
+</html>

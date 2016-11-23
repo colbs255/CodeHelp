@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Java</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="JS-navBar.js"></script>
+    <link rel="stylesheet" type="text/css" href="CSS-main.css">
+</head>
+<body>
+    <div class="jumbotron" id="jumbo">
+        <h1 class = "mainTitle" id="titleMain">Java</h1>
+    </div>
+    
+    <nav class="navbar navbar-inverse absBar" id="myBar">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myCollapseBar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+                <a class="navbar-brand" href="index.html">CodeHelp</a>
+          </div>
+          <div class="navbar-collapse collapse" id="myCollapseBar">
+            <ul class="nav navbar-nav">
+              <li class="active"><a href="JAVA-Intro.html">Java</a></li>
+              <li><a href="PYTHON-Intro.html">Python</a></li>
+              <li><a href="WEBDESIGN-Intro.html">HTML/CSS/JS</a></li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+      </nav>
+    
+    <div class="placeHolder"></div>
+
+    
+    <div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-2" id="mySideBar">
+            <nav class="navbar navbar-default" roll="navigation">
+                <div class="container-fluid" id="sideNavPadFixed">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle navbar-default" data-toggle="collapse" data-target="#mySideCollapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" id="sideBarTitle">Java Lessons</a>
+                </div>
+                <div class="nav-pills brand-pills nav-stacked collapse navbar-collapse" id="mySideCollapse">
+                    <ul class="nav">
+                    <li class="active"><a href="JAVA-Intro.html">Introduction to Java</a></li>
+                    <li><a href="JAVA-HelloWorld.html">Hello World</a></li>
+                    <li><a href="JAVA-Variables.html">Variables</a></li>
+                    <li><a href="JAVA-PrintInput.html">Print/Input</a></li>
+                    <li><a href="JAVA-MathFunctions.html">Math Functions</a></li>
+                    <li><a href="JAVA-ControlStatements.html">Control Statements</a></li>
+                    <li><a href="JAVA-Loops.html">Loops</a></li>
+                    <li><a href="JAVA-Arrays.html">Arrays</a></li>
+                    <li><a href="JAVA-Methods.html">Methods</a></li>
+                    <li><a href="JAVA-Conventions.html">Conventions</a></li>
+                    <li><a href="JAVA-Modifiers.html">Modifiers</a></li>
+                    <li><a href="JAVA-ClassesObjects.html">Classes and Objects</a></li>
+                    </ul>
+                </div>
+                </div>
+            </nav>
+    </div>
+        <div class="col-sm-10">
+        <h1 class="pageTitle">Java Conventions</h1>
+    
+        <p>This is an easy tutorial that is concerned with style of code rather than function. You have probably noticed common conventions in these tutorials already like classes are always capitalized, variables are not, and everything is indented. These are common conventions in Java that make code easy to read and edit. This is very important for computer science jobs and even computer science classes (many professors take off points on assignments if these conventions are not followed). Some environments may prefer slightly different styles of code, but these are generally accepted in Java.</p>
+
+        <h3>Naming</h3>
+    
+        <p>When making a variable final, it should be in all caps the words in the variable name should be separated with underscores like this: <code>final int MY_FINAL_VARIABLE_NAME = 1;</code>.</p>
+        <p>All other variable names (object names and primitive value names) should only have capital letters at the start of each word, but the first letter of the variable is always lowercase. This is called “camel case”. All of the variables in the sample codes of this site have used this convention.</p>
+        <p>The first letter of a class should always be capitalized. </p>
+            
+        <h3>Indentation</h3>
+        <p>There is a debate over using tabs or spaces for indentation in programing. You might want to see what your professor or workplace prefers. I prefer to just set my IDE to automatically use 4 spaces whenever I tab (google how to do this on you IDE), and that seems to be the best of both worlds.</p>
+        <p>The header of your class should not be indented, but the methods and variables within your class should be indented. Whenever you put code inside of a structure like a loop, conditional statement, or a method you should indent the code. This makes the code much easier to read and edit. You can look at all of the sample code sections to see what this looks like.</p>
+            
+        <h3>Brackets</h3>
+        <p>Generally, the opening bracket is on the same line as the code that the opening bracket “opens” like this:</p>
+        <pre>for (int x = 0; x &lt 4; x++) { // the opening bracket is on the same line
+    //this section is indented one more level
+}
+//see how this bracket lines up with the for part
+</pre>
+        <p>You should line up the closing bracket with the beginning of the section the closing header corresponds to on separate line from the rest of the code. This makes it easier for the programmer to see which bracket corresponds to what.</p>
+        <pre>if ((x * 2) >= 4) { //all of the operators have spaces and there is a space between the if keyword and the parantheses
+
+}</pre>
+        
+        <h3>Spacing</h3>
+        <p>Things like if statements and loops should have a space between the keyword and the parentheses.</p>
+        <p>Operators and commas should have spaces between each other to make the code easier to read. Here is an example.</p>
+        
+            <h3>Exercise</h3>
+            <p>The code below has many style issues. Try to go through it and find all of them. You might want to write the code from scratch and see if you follow all of the conventions correctly.</p>
+            <pre>public class badexample
+{
+int MYNUMBER = 4; int anothernumber = 2;
+
+public static void main(String[] args) {
+System.out.println(add());
+
+if(add()>7) {
+    System.out.println("Yay");
+            }
+}
+
+public static int add() {
+return MYNUMBER+anothernumber;}}</pre>
+            <p>Answer:</p>
+            <pre>public class BadExample {
+    int myNumber = 4;
+    int anotherNumber = 2;
+    
+    public static void main(String[] args) {
+        System.out.println(add());
+        
+        if (add() > 7) {
+            System.out.println("Yay");
+        }
+    }
+    
+    public static int add() {
+        return myNumber + anotherNumber;
+    }
+}
+</pre>
+        
+        
+        
+            
+        <ul class="pager">
+            <li class="previous"><a href="#"><span class="glyphicon glyphicon-menu-left"></span>Previous</a></li>
+            <li class="next"><a href="#">Next<span class="glyphicon glyphicon-menu-right"></span></a></li>
+        </ul>    
+        </div>
+    </div>
+    </div>
+    
+    <footer>
+        <p>Colby Chance 2016</p>
+      </footer>
+    
+</body>
+</html>

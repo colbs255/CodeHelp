@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Java</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="JS-navBar.js"></script>
+    <link rel="stylesheet" type="text/css" href="CSS-main.css">
+</head>
+<body>
+    <div class="jumbotron" id="jumbo">
+        <h1 class = "mainTitle" id="titleMain">Java</h1>
+    </div>
+    
+    <nav class="navbar navbar-inverse absBar" id="myBar">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myCollapseBar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+                <a class="navbar-brand" href="index.html">CodeHelp</a>
+          </div>
+          <div class="navbar-collapse collapse" id="myCollapseBar">
+            <ul class="nav navbar-nav">
+              <li class="active"><a href="JAVA-Intro.html">Java</a></li>
+              <li><a href="PYTHON-Intro.html">Python</a></li>
+              <li><a href="WEBDESIGN-Intro.html">HTML/CSS/JS</a></li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+      </nav>
+    
+    <div class="placeHolder"></div>
+
+    
+    <div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-2" id="mySideBar">
+            <nav class="navbar navbar-default" roll="navigation">
+                <div class="container-fluid" id="sideNavPadFixed">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle navbar-default" data-toggle="collapse" data-target="#mySideCollapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" id="sideBarTitle">Java Lessons</a>
+                </div>
+                <div class="nav-pills brand-pills nav-stacked collapse navbar-collapse" id="mySideCollapse">
+                    <ul class="nav">
+                    <li class="active"><a href="JAVA-Intro.html">Introduction to Java</a></li>
+                    <li><a href="JAVA-HelloWorld.html">Hello World</a></li>
+                    <li><a href="JAVA-Variables.html">Variables</a></li>
+                    <li><a href="JAVA-PrintInput.html">Print/Input</a></li>
+                    <li><a href="JAVA-MathFunctions.html">Math Functions</a></li>
+                    <li><a href="JAVA-ControlStatements.html">Control Statements</a></li>
+                    <li><a href="JAVA-Loops.html">Loops</a></li>
+                    <li><a href="JAVA-Arrays.html">Arrays</a></li>
+                    <li><a href="JAVA-Methods.html">Methods</a></li>
+                    <li><a href="JAVA-Conventions.html">Conventions</a></li>
+                    <li><a href="JAVA-Modifiers.html">Modifiers</a></li>
+                    <li><a href="JAVA-ClassesObjects.html">Classes and Objects</a></li>
+                    </ul>
+                </div>
+                </div>
+            </nav>
+    </div>
+        <div class="col-sm-10">
+        <h1 class="pageTitle">Classes and Objects</h1>
+    
+        <p>Now you can be introduced to Object Oriented Programming (OOP). This is what Java is all about, and just about every program you create in your career will utilize concepts of OOP. Object Oriented Programming is about creating your own types of data (objects) and manipulating them in your own specified way. This makes modelling things in the real world much easier and organized. For example, let’s say you wanted to make a video game with dogs in it. You would make your own Dog object that can bark, eat, or run, and it will also have its own characteristics such as hair color, height, and weight.</p>
+
+        <h3>Objects</h3>
+    
+        <p>You have used objects before. The scanner that you use for input is an object. Objects are designed by classes. The class gives the layout of what of kind of data an object contains (global variables) and how the object can manipulate the data (methods). For example, a dog object would have a global string variable called name to hold the name of the dog, a global string variable for the breed, and a global int for the age. Your Dog class would have all of these variables (or more if you desire) and it would have methods for the actions of the dog. You could have a void bark method that prints out “bark”, a method that prints out “the dog is eating”, and many more. Here is an example of a dog class:</p>
+        <pre>public class Dog {
+
+    private String name;
+    private String breed;
+    private int age;
+    
+    public String getName() {
+        return name;
+    }
+    
+    public void setName(String n) {
+        name = n;
+    }
+    
+    public String getBreed() {
+        return breed;
+    }
+    
+    public void setBreed(String b) {
+        breed = b;
+    }
+    
+    public int getAge() {
+        return age;
+    }
+    
+    public void setAge(int a) {
+        age = a;
+    } 
+    
+    public void bark() {
+        System.out.println("Bark Bark");
+    }
+    
+    public void eat() {
+        System.out.println("Dog is eating");
+    }
+    
+    public String toString() {
+        return name + " is a " + breed + " that is " + age + " years old.";
+    }
+}
+</pre>
+        <p>This is the main class of the program that has a Dog object in it.</p>
+        <pre>public class DogArea {
+    public static void main(String[] args) {
+        Dog buddy = new Dog();
+        buddy.setName("Buddy");
+        buddy.setBreed("Golden Retriever");
+        buddy.setAge(7);
+        System.out.println(buddy.toString());
+        boolean isAngry = true;
+        if (isAngry) {
+            buddy.bark();
+        }
+    }
+}</pre>
+        <p>So you would have 2 files in your project folder named: <code>Dog.java</code> and <code>DogArea.java</code>. To run your program, you would just compile the DogArea.java and then run it. Because this file contains the main method, the compiler will compile this class and all the other necessary classes.</p>
+            
+            <h3>Constructors</h3>
+            <p>Notice how in the code above, an object was created and then its variables were set using the methods within the Dog class. This is okay, but what if you wanted to just set all the variables when the object was first created? That is what constructors are for.</p>
+            <p>A constructor is a special method that is called automatically when an object is created, and it can’t return anything. You can use constructors to print info to the console when an object is created, set the vales of the object’s variables, or just about anything else like a normal method (except return a value). You have actually already used constructors before. Whenever you make a scanner object, the last part of the code is <code>new Scanner(System.in)</code>. The System.in is actually an argument or parameter that goes into the constructor when you create the object.</p>
+            
+            <h3>Making a Constructor</h3>
+            <p>To make a constructor, you simply make a method that is the same name as your class and has no return type modifier. For example, the Dog class could have a constructor that looks like this:</p>
+            <pre>public Dog(String n, String b, int a) {
+    name = n;
+    breed = b;
+    age = a;
+    System.out.println("A new dog named " + name + " was born".);
+}
+</pre>
+            
+            <p>In your DogArea class, you can now make a new Dog object and set its values with just one line like this <code>Dog buddy = new Dog(“Buddy”, “Golden Retriever”, 0);</code>. This way the user of your class or you won’t have to call the set methods later. The variables that you pass into the constructor are separated by commas and do need to be in order. If you don’t pass them in order then the compiler will see this and give you an error. Also, the constructor will give a quick print out letting the user know a dog was created.</p>
+            
+            <h3>Field Variables</h3>
+            <p>If the values of a variable are not private, you can access the variables of an object directly by typing <code>objectName.variableName</code>. This is not recommended though because you should make your variables private so the user can’t do something illogical with the variable like set the value of a dogs age to a negative number.</p>
+            <p>This is why it is always recommended to make public “get” and “set” methods that will return the values of variables and set the values of variables (if you want to allow your user to do that) in a safe way that you preprogrammed.</p>
+            <p>If you don’t want a user having any access to your variables, then make them private and don’t create any get or set methods.</p>
+            
+            <h3>Static</h3>
+            <p>A <code>static</code> is a keyword that means that whatever you apply the static keyword to is connected to the class itself and not an object. This means that you can call or utilize static elements within a class without first creating an object. You often use static elements for things that all of the objects for a class share, but don’t have unique values for.  Static can be a little tricky to grasp initially without examples, so these should help. </p>
+            <p>A static method is a method that can be called from a class without first creating an object. In the methods tutorial, you were told to make methods static when methods were initially introduced to you. This is because the methods you were making were being called without using an object. The <code>System.out.println()</code> method is static because you never made an object to call it from. Furthermore, if you made a Dog object called spot and said <code>spot.getAge()</code> this would not be a static method because it is connected to your specific dog object. Static methods are called by first specifying the class name and then the method with a dot in between. If you were making a special math class called MyMath, you might want to make a method that returns the value of Pi. Because Pi will always be the same number and it will not be specific to an object, you should make this a static method, and would call it like this <code>MyMath.getPi()</code>.</p>
+            <p>You can also have static variables that belong to the class and not a specific object. A variable like breed would not be static in the Dog class because breed is specific to each object. A good example of a static variable would be making a static int called numberOfDogs. Each time a dog object is created, you can add one to this variable, so it will count the number of dogs that will be created with this Dog class. If you did not make numberOfDogs a static variable, then this would be impossible from the class. You could then make a static method that returns the numberOfDogs, so the use will know how many dogs have been created from the Dog class. Here is an example of a dog class that uses static elements.</p>
+            <pre>public class Dog {
+    private String name;
+    private String breed;
+    private int age;
+    
+    private static int numberOfDogs;
+    
+    public Dog(String n, String b, int a) {
+    name = n;
+    breed = b;
+    age = a;
+    System.out.println("A new dog named " + name + " was born".);
+    numberOfDogs++;
+    }
+    
+    public int getNumberDogs() {
+        return numberOfDogs;
+    }
+    
+    public String getName() {
+        return name;
+    }
+    
+    public void setName(String n) {
+        name = n;
+    }
+    
+    public String getBreed() {
+        return breed;
+    }
+    
+    public void setBreed(String b) {
+        breed = b;
+    }
+    
+    public int getAge() {
+        return age;
+    }
+    
+    public void setAge(int a) {
+        age = a;
+    } 
+    
+    public void bark() {
+        System.out.println("Bark Bark");
+    }
+    
+    public void eat() {
+        System.out.println("Dog is eating");
+    }
+    
+    public String toString() {
+        return name + " is a " + breed + " that is " + age + " years old.";
+    }
+}
+
+}</pre>
+        <p>This is mostly the same code as before but now a static int has been made that represents the number of dogs. Each time a dog is created, the constructor adds one to the static variable. There is also a static method that will return the number of dogs.</p>
+            
+        <h3>this keyword</h3>
+        <p>The <code>this</code> keyword is used when you are referring to elements of the object itself within the class. For example, let’s say your code looked like this</p>
+        <pre>public class Dog {
+    private String name;
+    
+    public Dog(String name) {
+        name = name;
+    }
+    
+    public String getName() {
+        return name;
+    }
+}</pre>
+        <p>Let’s say you make an object from this class and use getName() to print out the name you passed in. getName() will return a blank string. Can you figure out why?</p>
+            
+        <p>In the constructor you have a variable called name and then the field variable is also called name, so there are some naming issues. As said in the earlier tutorials, the method will always use the more local variable; therefore, in this case the code is just creating a variable called name within the constructor and setting it equal to itself. So the constructor essentially does nothing. You would fix this by using the this keyword:</p>
+        <pre>public class Dog {
+    private String name;
+    
+    public Dog(String name) {
+        this.name = name;
+    }
+    
+    public String getName() {
+        return name;
+    }
+}</pre>
+        <p>The code in this example will work as intended because this lets the JVM know that you are referring to the global variable that belongs to the object itself, and not this local method. Also, the this keyword is really only necessary if your local variable names are the same as your global variable names, so you could avoid using the this keyword if you just don’t repeat global variable names. A lot of this is dependent on the style that your professor or employer prefers.</p>
+            
+        <h3>toString method</h3>
+        <p>Have you ever tried to print out an object like this <code>System.out.println(ObjectName)</code>? If you have then you most likely got a weird sequence of characters that looks something like this User@18fd984. This is because the console is printing out the memory address of the object. The memory address just tells you where the object is stored in the system essentially. What if you wanted your own custom message to be printed when you printed an object? This is possible with the toString() method.</p>
+        <p>The toString method has a general form like this <code>public String toString() {return “Your String”;} </code>. So if you try to print out the object itself, then this message will be called automatically. It is a special feature within Java.</p>
+            
+        <h3>Exercise</h3>
+        <p>This will be a larger exercise than normal, but it will be good practice for what you have learned so far. Your mission, should you choose to accept it, is to make a class called Movie that has a String for the title, a String for the director, and an int for the year. You should make a constructor that sets all of these values, and get methods for all of them as well. Then make a Test class that creates some movies (any movies you want), and prints out the name and year of each movie. Try to do this with as little code as possible. (Hint: you might want to make a method that prints the info of the movie for you)</p>
+        <p>Movie Class</p>
+        <pre>public class Movie {
+    private String title;
+    private String director;
+    private int year;
+    public Movie(String t, String d, int y) {
+        title = t;
+        director = d;
+        year = y;
+    }
+    
+    public String getTitle() {
+        return title;
+    }
+    
+    public String getDirector() {
+        return director;
+    }
+    
+    public int getYear() {
+        return year;
+    }
+    
+    public void setTitle(String t) {
+        title = t;
+    }
+    
+    public void setDirector(String d) {
+        director = d;
+    }
+    
+    public void setYear(int y) {
+        year = y;
+    }
+    
+    public String toString() {
+        return title + " (" + year + ")";
+    }
+}</pre>
+            
+        <p>Test Class</p>
+        <pre>public class Test {
+    public static void main(String[] args) {
+        Movie m1 = new Movie("Shawshank Redemption", "Frank Darabont", 1994);
+        Movie m2 = new Movie("Interstellar", "Christopher Nolan", 2014);
+        Movie m3 = new Movie("2001: A Space Odyssey", "Stanley Kubrick", 1968);
+    }
+}</pre>
+        
+            
+        <ul class="pager">
+            <li class="previous"><a href="#"><span class="glyphicon glyphicon-menu-left"></span>Previous</a></li>
+            <li class="next"><a href="#">Next<span class="glyphicon glyphicon-menu-right"></span></a></li>
+        </ul>    
+        </div>
+    </div>
+    </div>
+    
+    <footer>
+        <p>Colby Chance 2016</p>
+      </footer>
+    
+</body>
+</html>
