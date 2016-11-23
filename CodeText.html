@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html>
+<head>
+    </head>
+<body>
+<h1>Java</h1>
+<h3>Variables- Sample variables</h3>
+<pre>public class SampleVariables {
+    public static void main(String[] args) {
+        int radius = 4;
+        double pi = 3.1415;
+        double circleArea = pi * r * r;
+        System.out.println("Circle Area: " + circleArea);
+    
+        int x = (5/2) + 1;
+        System.out.println(x);
+    }
+}
+</pre>
+    
+<h3>variables- Exercises</h3>
+<pre>public class Exercise1 {
+    public static void main(String[] args) {
+        char l1 = 'I';
+    
+        String name = "Jim";
+        int age = (45/8) + 2;
+        System.out.println(l1 + " know " + name + ". He is " age);
+    }
+}
+</pre>
+
+<pre>public class Exercise2 {
+    public static void main(String[] args) {
+        int y = 2.0;
+        System.out.println(y);
+    }
+}
+</pre>
+    
+<h3>Input/print</h3>
+<pre>import java.util.Scanner;
+// see the import ^^
+public class ScannerExample {
+    public static void main(String[] args) {
+        
+    }
+}
+</pre>
+    
+<h3>Scanner</h3>
+<pre>import java.util.Scanner;
+public class ScannerExample {
+    public static vod main(String[] args) {
+    Scanner input = new Scanner(System.in);
+    
+    }
+}
+</pre>
+    
+<pre>import java.util.Scanner;
+public class CircleArea {
+    public static vod main(String[] args) {
+    Scanner input = new Scanner(System.in);
+    
+    System.out.println("Enter the raidus of the circle");
+    double radius = input.nextDouble();
+    
+    System.out.println("Area of circle: " + (radius * radius * 3.14));
+    }
+}
+</pre> 
+
+<h3>Scanner exercise</h3>
+<pre>import java.util.Scanner;
+public class HelloUser {
+    public static vod main(String[] args) {
+    Scanner input = new Scanner(System.in);
+    
+    System.out.println("What is your name?");
+    String name = input.nextLine();
+    System.out.println("Hello " + name);
+}
+</pre>
+    
+<h1>Math Functions</h1>
+<h3>Cheat Sheet</h3>
+<pre>public class CheatSheet {
+    public static void main(String[] args) {
+        Math.abs(-10.1); // returns 10.1 absValue of -10.1 is 10.1
+        Math.pow(4, 2); // returns 16 because 4^2 = 16
+        
+        Math.floor(4.7); // returns 4 because 4.7 rounds down to 4
+        Math.ceil(4.3); // returns 5 because 4.3 rounds up to 5
+        
+        Math.sin(0); // returns 0 because sin of 0 radians is 0
+        Math.cos(0); // returns 1 because cos of 0 radians is 1
+        Math.tan(0); // returns 0 because tan of 0 radians is 0
+        Math.toDegrees(3.14); // returns ~180 because pi radians is 180 degrees
+        
+        Math.min(3, 5.2); // returns 3 because 3 is less than 5.2
+        Math.max(3, 5.2); // returns 5.2 because 5.2 is greater than 
+    }
+}
+</pre>
+<h3>Solution 1</h3>
+<pre>import java.util.Scanner;
+public class CrazyMath {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        
+        System.out.println("Enter angle 1:");
+        double angle1 = input.nextDouble();
+        
+        System.out.println("Enter angle 2:");
+        double angle2 = input.nextDouble();
+        
+        double higherAngle = Math.max(angle1, angle2);
+        double inRadians = Math.toRadians(higherAngle);
+        double cos = Math.cos(inRadians);
+        double absVal = Math.abs(cos);
+        
+        System.out.println("Answer: " + absVal);
+    }
+}
+</pre>
+    
+<h3>Solution 2</h3>
+<pre>import java.util.Scanner;
+public class CrazyMath {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        
+        System.out.println("Enter angle 1:");
+        double angle1 = input.nextDouble();
+        
+        System.out.println("Enter angle 2:");
+        double angle2 = input.nextDouble();
+        
+        System.out.println("Answer: " + Math.abs(Math.cos(Math.toRadians(Math.max(angle1, angle2)))));
+    }
+}
+</pre>
+
+    
+<h1>Control Statements</h1>
+<h3>if statement</h3>
+<pre>if (yourCondition) {
+    //do the code inside the curly brackets
+}
+</pre>
+    
+<h3>if example</h3>
+<pre>int x = 5;
+if (x >= 5) {
+    System.out.println("X is greater than or equal to 5");
+}
+</pre>
+    
+<h3>if boolean example</h3>
+<pre>boolean hasGlasses = false;
+if (hasGlasses) {
+    System.out.println("Martha has glasses");
+}
+</pre>
+
+    
+<h3>else example</h3>
+<pre>int x = 5;
+if (x == 4) {
+    System.out.println("X is equal to 4");
+} else {
+    System.out.println("I don't know what x is... but I know it's not 4.");
+}
+</pre>
+    
+<h3>else if example</h3>
+<pre>int age = 19;
+if (age &lt= 3) {
+    System.out.println("You are a toddler");
+} else if (age &lt= 12) {
+    System.out.println("You are a kid");
+} else if (age &lt= 17) {
+    System.out.println("You are a teen");
+} else {
+    System.out.println("You are an adult.");
+}
+</pre>
+
+    
+<h3>Switch Generic</h3>
+<pre>
+switch (var) {
+    case 1: // does this if var equals 1
+    break;
+    case 2: // does this if var equals 2
+    break;
+    case 3: // does this if var equals 3
+    break;
+    default: // default case is run if none of the above options were picked
+    break;
+}
+
+
+</pre>
+    
+<h3>switch example</h3>
+<pre>Scanner input = new Scanner(System.in);
+System.out.println("1. Iron Man");
+System.out.println("2. Thor");
+System.out.println("3. Hulk");
+System.out.println("4. Black Panther");
+System.out.println("Which character would you like to play as? Enter a number.");
+int choice = input.nextInt();
+
+switch (choice) {
+    case 1: System.out.println("You are Iron Man");
+    break;
+    case 2: System.out.println("You are Thor");
+    break;
+    case 3: System.out.println("You are Hulk");
+    break;
+    case 4: System.out.println("You are Black Panther");
+    break;
+    default: System.out.println("You did not pick a valid choice.");
+    System.out.printnl("You were defaulted to Ant Man");
+    break;
+}
+
+</pre>
+    
+<h3> and ex need</h3>
+<pre>boolean canFly = true;
+boolean hasSuperStrength = true;
+if (canFly) {
+    if (hasSuperStrength) {
+    System.out.println("You are superman.");
+    }
+}
+</pre>
+
+<h3>and operator</h3>
+<pre>boolean canFly = true;
+boolean hasSuperStrength = true;
+if (canFly && hasSuperSpeed) {
+    System.out.println("You are superman.");
+}
+</pre>
+
+<h3> or ex need</h3>
+<pre>boolean canFly = true;
+boolean hasSuperStrength = true;
+if (canFly) {
+    System.out.println("You have super powers.");
+}
+if (hasSuperStrength) {
+    System.out.println("You have super powers.");
+}
+</pre>
+
+<h3>or example</h3>
+<pre>if (canFly || hasSuperStrength) {
+    System.out.println("You have super powers.");
+}
+</pre>
+
+<h3>Challenge</h3>
+<pre>if (has4Sides && allSidesEqualLength && allConers90Degrees) {
+    System.out.println("Square");
+} else if (has4Sides && allCorners90Degrees) {
+    System.out.println("Rectangle");
+} else if (has4Sides) {
+    System.out.println("Other Quadrillateral");
+} else {
+    System.out.println("Not a quadralliteral");
+}
+
+</pre>
+
+<h1>Loops</h1>
+<h3>While loop</h3>
+<pre>while (testCondition) {
+    //if test condition is true then this code will run
+}
+
+</pre>
+    
+<h3>While loop factorial</h3>
+<pre>int factorialNum = 6;
+int answer = 1;
+while (factorialNum > 0) {
+    answer *= factorialNum;
+    factorialNum--;
+}
+System.out.println("Answer: " + answer);
+</pre>
+    
+<h3>for loop syntax</h3>
+<pre>for (initiating condition; end condition; do this after each iteration) {
+    //code
+}
+</pre>
+    
+<h3>factorial for loop</h3>
+<pre>int answer = 1;
+for (int factorialNum = 6; factorialNum > 0; factorialNum--) {
+    answer *= factorialNum;
+}
+</pre>
+    
+<h3>do while loop</h3>
+<pre>do {
+    //code
+    } while(testCondition);
+</pre>
+    
+    
+<h1>Arrays</h1>
+<h3>Array syntax</h3>
+<pre>//General case
+varType[] arrayName = new varType[numberOfElements];
+
+//Example
+double[] testScores = new double[10];
+</pre>
+    
+    
+<h3>Setting array values</h3>
+<pre>//General case
+arrayName[indexOfElement] = value;
+
+//Example
+testScores[0] = 89;
+testScores[1] = 92;
+testScores[2] = 84;
+</pre>
+    
+<h3>Array Shortcut</h3>
+<pre>General Case
+varType varName = [value0, value1, value2, value3];
+//Example
+String studentNames = ["Steve", "Bill", "Mark"];
+</pre>
+    
+<h3>Enhanced for loop syntax</h3>
+<pre>
+for(arrayType variableName: arrayName) {
+    // do stuff with variable name
+}
+</pre>
+
+<h3>Enhanced for loop example</h3>
+<pre>int[] numbers = [23, 34, 35, 11, 10];
+int sum = 0;
+for(int x: numbers) {
+    sum += x;
+}
+
+</pre>
+
+<h3>Array and loop</h3>
+<pre>double[] testScores = [89, 92, 84];
+double sum = 0;
+for (int x = 0; x &lt; testScores.length; x++) {
+    sum += testScores[x];
+}
+double average = sum/testScores.length;
+ </pre>  
+    
+<h1>Methods</h1>    
+<h3>Method syntax</h3>
+<pre>modifierWords returnType methodName(parameters) {
+    //code of your method
+    returnStatement;
+}
+</pre>
+<h3>temperature method example</h3>
+<pre>public class Temperature {
+    public static void main(String[] args) {
+        System.out.println(toFahrenheit(0));
+    }
+    
+    public static double toFahrenheit(double celsius) {
+    return (celsius * 1.8) + 32;
+    }
+}
+</pre>
+    
+<h3>void method</h3>
+<pre>public static void sayHello(String firstName, String lastName) {
+    System.out.println("Hello " + firstName + " " + lastName);
+}
+
+</pre>
+    
+<h3>Global variables</h3>
+<pre>public class Person() {
+    private String name;
+    private int age;
+    
+    
+    public static void main(String[] args) {
+    setName("Lisa");
+    
+    }
+    
+    public static void setName(String newName) {
+        name = newName;
+    }
+    
+    public static void setAge(int age) {
+        age = age;
+    }
+}
+
+</pre>
+    
+<h3>Ex 1</h3>
+<pre>public static String printUser(String firstName, String lastName, int age) {
+    return firstName + " " + lastName + " " + age;
+}
+</pre>
+<h3>Avg method</h3>
+<pre>public static double avg(double... numbers) {
+    double sum = 0;
+    for (double x: numbers) {
+        sum += x;
+    }
+    return sum / numbers.length;
+}
+</pre>
+    
+<h1>Java Conventions</h1>
+<h3>Line up brackets</h3>
+<pre>for (int x = 0; x &lt 4; x++) { // the opening bracket is on the same line
+    //this section is indented one more level
+}
+//see how this bracket lines up with the for part
+</pre>
+    
+<h3>Spaces</h3>
+<pre>if ((x * 2) >= 4) { //all of the operators have spaces and there is a space between the if keyword and the parantheses
+
+}
+</pre>
+    
+<h3>Bad example</h3>
+<pre>public class badexample
+{
+int MYNUMBER = 4; int anothernumber = 2;
+
+public static void main(String[] args) {
+System.out.println(add());
+
+if(add()>7) {
+    System.out.println("Yay");
+            }
+}
+
+public static int add() {
+return MYNUMBER+anothernumber;}}
+</pre>
+    
+<h3>Good Code</h3>
+<pre>public class BadExample {
+    int myNumber = 4;
+    int anotherNumber = 2;
+    
+    public static void main(String[] args) {
+        System.out.println(add());
+        
+        if (add() > 7) {
+            System.out.println("Yay");
+        }
+    }
+    
+    public static int add() {
+        return myNumber + anotherNumber;
+    }
+}
+</pre>
+    
+<h1>Objects</h1>
+<h3>Dog class</h3>
+<pre>public class Dog {
+
+    private String name;
+    private String breed;
+    private int age;
+    
+    public String getName() {
+        return name;
+    }
+    
+    public void setName(String n) {
+        name = n;
+    }
+    
+    public String getBreed() {
+        return breed;
+    }
+    
+    public void setBreed(String b) {
+        breed = b;
+    }
+    
+    public int getAge() {
+        return age;
+    }
+    
+    public void setAge(int a) {
+        age = a;
+    } 
+    
+    public void bark() {
+        System.out.println("Bark Bark");
+    }
+    
+    public void eat() {
+        System.out.println("Dog is eating");
+    }
+    
+    public String toString() {
+        return name + " is a " + breed + " that is " + age + " years old.";
+    }
+}
+</pre>
+    
+<h3>Dog main</h3>
+<pre>public class DogArea {
+    public static void main(String[] args) {
+        Dog buddy = new Dog();
+        buddy.setName("Buddy");
+        buddy.setBreed("Golden Retriever");
+        buddy.setAge(7);
+        System.out.println(buddy.toString());
+        boolean isAngry = true;
+        if (isAngry) {
+            buddy.bark();
+        }
+    }
+}
+</pre>
+    
+<h3>Dog object</h3>
+<pre>public Dog(String n, String b, int a) {
+    name = n;
+    breed = b;
+    age = a;
+    System.out.println("A new dog named " + name + " was born".);
+}
+</pre>
+    
+<h3>Static stuff</h3>
+<pre>public class Dog {
+    private String name;
+    private String breed;
+    private int age;
+    
+    private static int numberOfDogs;
+    
+    public Dog(String n, String b, int a) {
+    name = n;
+    breed = b;
+    age = a;
+    System.out.println("A new dog named " + name + " was born".);
+    numberOfDogs++;
+    }
+    
+    public int getNumberDogs() {
+        return numberOfDogs;
+    }
+    
+    public String getName() {
+        return name;
+    }
+    
+    public void setName(String n) {
+        name = n;
+    }
+    
+    public String getBreed() {
+        return breed;
+    }
+    
+    public void setBreed(String b) {
+        breed = b;
+    }
+    
+    public int getAge() {
+        return age;
+    }
+    
+    public void setAge(int a) {
+        age = a;
+    } 
+    
+    public void bark() {
+        System.out.println("Bark Bark");
+    }
+    
+    public void eat() {
+        System.out.println("Dog is eating");
+    }
+    
+    public String toString() {
+        return name + " is a " + breed + " that is " + age + " years old.";
+    }
+}
+
+}</pre>
+    
+<h3>this keyword ex1</h3>
+<pre>public class Dog {
+    private String name;
+    
+    public Dog(String name) {
+        name = name;
+    }
+    
+    public String getName() {
+        return name;
+    }
+}
+</pre>
+    
+<h3>this keyword solution</h3>
+<pre>public class Dog {
+    private String name;
+    
+    public Dog(String name) {
+        this.name = name;
+    }
+    
+    public String getName() {
+        return name;
+    }
+}</pre>
+    
+<h3>movie class</h3>
+<pre>public class Movie {
+    private String title;
+    private String director;
+    private int year;
+    public Movie(String t, String d, int y) {
+        title = t;
+        director = d;
+        year = y;
+    }
+    
+    public String getTitle() {
+        return title;
+    }
+    
+    public String getDirector() {
+        return director;
+    }
+    
+    public int getYear() {
+        return year;
+    }
+    
+    public void setTitle(String t) {
+        title = t;
+    }
+    
+    public void setDirector(String d) {
+        director = d;
+    }
+    
+    public void setYear(int y) {
+        year = y;
+    }
+    
+    public String toString() {
+        return title + " (" + year + ")";
+    }
+}
+</pre>
+    
+<h3>test class</h3>
+<pre>public class Test {
+    public static void main(String[] args) {
+        Movie m1 = new Movie("Shawshank Redemption", "Frank Darabont", 1994);
+        Movie m2 = new Movie("Interstellar", "Christopher Nolan", 2014);
+        Movie m3 = new Movie("2001: A Space Odyssey", "Stanley Kubrick", 1968);
+    }
+}
+
+</pre>
+    </body>
+
+</html>
