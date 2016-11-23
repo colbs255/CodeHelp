@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Java</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="JS-navBar.js"></script>
+    <link rel="stylesheet" type="text/css" href="CSS-main.css">
+</head>
+<body>
+    <div class="jumbotron" id="jumbo">
+        <h1 class = "mainTitle" id="titleMain">Java</h1>
+    </div>
+    
+    <nav class="navbar navbar-inverse absBar" id="myBar">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myCollapseBar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+                <a class="navbar-brand" href="index.html">CodeHelp</a>
+          </div>
+          <div class="navbar-collapse collapse" id="myCollapseBar">
+            <ul class="nav navbar-nav">
+              <li><a href="JAVA-Intro.html">Java</a></li>
+              <li><a href="PYTHON-Intro.html">Python</a></li>
+              <li><a href="WEBDESIGN-Intro.html">HTML/CSS/JS</a></li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+      </nav>
+    
+    <div class="placeHolder"></div>
+
+    
+    <div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-2" id="mySideBar">
+            <nav class="navbar navbar-default" roll="navigation">
+                <div class="container-fluid" id="sideNavPadFixed">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle navbar-default" data-toggle="collapse" data-target="#mySideCollapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" id="sideBarTitle">Java Lessons</a>
+                </div>
+                <div class="nav-pills brand-pills nav-stacked collapse navbar-collapse" id="mySideCollapse">
+                    <ul class="nav">
+                    <li class="active"><a href="JAVA-Intro.html">Introduction to Java</a></li>
+                    <li><a href="JAVA-HelloWorld.html">Hello World</a></li>
+                    <li><a href="JAVA-Variables.html">Variables</a></li>
+                    <li><a href="JAVA-PrintInput.html">Print/Input</a></li>
+                    <li><a href="JAVA-MathFunctions.html">Math Functions</a></li>
+                    <li><a href="JAVA-ControlStatements.html">Control Statements</a></li>
+                    <li><a href="JAVA-Loops.html">Loops</a></li>
+                    <li><a href="JAVA-Arrays.html">Arrays</a></li>
+                    <li><a href="JAVA-Methods.html">Methods</a></li>
+                    <li><a href="JAVA-Conventions.html">Conventions</a></li>
+                    <li><a href="JAVA-Modifiers.html">Modifiers</a></li>
+                    <li><a href="JAVA-ClassesObjects.html">Classes and Objects</a></li>
+                    </ul>
+                </div>
+                </div>
+            </nav>
+    </div>
+        <div class="col-sm-10">
+        <h1 class="pageTitle">Math Functions</h1>
+    
+        <p>Java has a lot of built in math tools that makes programming easy and more intuitive. The first thing you should know is that all of these tools belong to the <code>Math</code> class. Fortunately, you do not have to import the math class, all you have to do is type <code>Math.functionYouWant(Parameter)</code>. There is a cheat sheet at the bottom of the page that shows what all of the main Math functions do.</p>
+
+        <h3>Math.abs()</h3>
+        <p>The absolute value method (a method is essentially a function) takes in any kind of number (int or double), and returns the absolute value of it (the numbers distance from 0). So <code>Math.abs(-3.2)</code> would return <code>3.2</code>.</p>
+            
+        <h3>Math.pow()</h3>
+        <p>This takes 2 arguments. The first is the base, and the second is the exponent. For example, <code>Math.pow(2, 3)</code> would return 8 because 2 to the third power is 8.</p>
+            
+        <h3>Math.floor() and Math.ceil()</h3>
+        <p><code>Math.floor()</code> takes in a number and rounds it down to the nearest whole number or integer. <code>Math.ceil()</code> does the opposite. It rounds up to the nearest integer. <code>Math.floor(2.8)</code> will return 2 and <code>Math.ceil(2.3)</code> will return 3.</p>
+            
+        <h3>Trigonometry functions</h3>
+        <p>There are several trigonometry functions, they all take in radians and return radians <b>not degrees</b> with the exception of <code>toRadians()</code> and <code>toDegrees</code>. There is a <code>Math.cos()</code>, <code>Math.sin()</code>, and a <code>Math.tan()</code> function. All of these take in an angle in radians and return the result in radians. The <code>Math.toRadians()</code> method takes in an angle in degrees and returns the equivalent angle in radians and the <code>Math.toDegrees()</code> does the opposite.</p>
+            
+        <h3>Math.min() and Math.max()</h3>
+        <p>The <code>Math.min()</code> method takes in 2 different numbers separated by commas and then returns the lower number of the two. The <code>Math.max()</code> takes in 2 numbers as well and returns the greater of the 2.</p>
+            
+        <h3>Cheat Sheet</h3>
+        <pre>public class CheatSheet {
+    public static void main(String[] args) {
+        Math.abs(-10.1); // returns 10.1 absValue of -10.1 is 10.1
+        Math.pow(4, 2); // returns 16 because 4^2 = 16
+        
+        Math.floor(4.7); // returns 4 because 4.7 rounds down to 4
+        Math.ceil(4.3); // returns 5 because 4.3 rounds up to 5
+        
+        Math.sin(0); // returns 0 because sin of 0 radians is 0
+        Math.cos(0); // returns 1 because cos of 0 radians is 1
+        Math.tan(0); // returns 0 because tan of 0 radians is 0
+        Math.toDegrees(3.14); // returns ~180 because pi radians is 180 degrees
+        
+        Math.min(3, 5.2); // returns 3 because 3 is less than 5.2
+        Math.max(3, 5.2); // returns 5.2 because 5.2 is greater than 
+    }
+}
+</pre>
+            
+        <h3>Assignment Shortcuts</h3>
+        <p>You will often change the value of variables while programming. Let’s say you just wanted to add the number 1 to your variable. One way is like this <code>varName = VarName + 1;</code>. This is valid in Java because it evaluates the expression before assigning it to the variable. This code gets the value of the variable, adds 1 to the variable, and then assigns the variable that new value. A shortcut that you will see often in java to doing this is <code>varName++;</code>. This is a shortcut that will add 1 to your variable. It is 100% equivalent to <code>varName = VarName + 1;</code>; it is just a nice feature that the creators of Java added.</p>
+        <p>Let’s say you wanted to add a number that isn’t necessarily 1 to your variable. There is a shortcut for that also that looks like this <code>varName += 2</code>, you can use this for whatever number you want.</p>
+        <p>These shortcuts also apply for subtraction you can do <code>varName--</code> which will subtract 1 from the variable and <code>varName -= 2</code> which will subtract 2.</p>
+        <p>There is also a shortcut for multiplication that looks like this <code>varName *= anyNumber</code>. This will multiply your variable by the number you enter and set it equal to that new value in the process.</p>
+        <p>One more thing to note is that <code>++varName</code> and <code>varName++</code> are actually both valid actions in Java, but they work differently (this distinction is commonly tested in college CS courses and interviews). The distinction can be seen when you pass them into the println method. Let’s say you have an int called myNumber that equals 4. If you typed <code>System.out.println(myNumber++);</code>, what will be printed out? 4 or 5 because the code is adding 1 to myNumber? This code will print 4, because myNumber++ will return the myNumber value before adding 1 to it. What if you typed <code>System.out.println(++myNumber);</code>?  This would print 5, because ++myNumber will add 1 to the variable and then return it. So make sure you know the difference between these 2 forms and know when you should use them.</p>
+            
+        <h3>Exercise</h3>
+        <p>Hopefully this gives you an idea of why many scientists and mathematicians use programming languages and how you can use them too. Try to make a program that asks for two angle measures in degrees, converts the higher angle measurement to radians, and then prints the absolute value of the cosine of the number. Yes, this might be difficult for you (there are many different ways to do it), but it will give you a better idea of how methods work in Java.</p>
+            
+        <p>Solution 1</p>
+        <pre>import java.util.Scanner;
+public class CrazyMath {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        
+        System.out.println("Enter angle 1:");
+        double angle1 = input.nextDouble();
+        
+        System.out.println("Enter angle 2:");
+        double angle2 = input.nextDouble();
+        
+        double higherAngle = Math.max(angle1, angle2);
+        double inRadians = Math.toRadians(higherAngle);
+        double cos = Math.cos(inRadians);
+        double absVal = Math.abs(cos);
+        
+        System.out.println("Answer: " + absVal);
+    }
+}
+</pre>
+        <p>This is a perfectly valid solution, but look at this solution.</p>
+            
+        <p>Solution 2</p>
+        <pre>import java.util.Scanner;
+public class CrazyMath {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        
+        System.out.println("Enter angle 1:");
+        double angle1 = input.nextDouble();
+        
+        System.out.println("Enter angle 2:");
+        double angle2 = input.nextDouble();
+        
+        System.out.println("Answer: " + Math.abs(Math.cos(Math.toRadians(Math.max(angle1, angle2)))));
+    }
+}
+</pre>
+        <p>This solution is a bit extreme, but it demonstrates how functions can be called within each other and required a lot less code. Take a moment to conceptualize what exactly is happening. Start from the middle and then work your way out.</p>
+        
+            
+        <ul class="pager">
+            <li class="previous"><a href="#"><span class="glyphicon glyphicon-menu-left"></span>Previous</a></li>
+            <li class="next"><a href="#">Next<span class="glyphicon glyphicon-menu-right"></span></a></li>
+        </ul>    
+        </div>
+    </div>
+    </div>
+    
+    <footer>
+        <p>Colby Chance 2016</p>
+      </footer>
+    
+</body>
+</html>

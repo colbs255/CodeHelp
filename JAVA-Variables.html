@@ -106,6 +106,45 @@
         <h3>String</h3>
             <p>A string is essentially a collection of chars. They can be used to represent a word, a phrase, a sentence, or even a paragraph. String variables are technically not primitives, they are reference variables that represent objects. However, Java essentially treats Strings them as primitives, and you will learn more about this later. For now, just know what a string is and how you use them like this: <code>String myName = “Steve”;</code>. Notice that <code>String</code> is capitalized and it always has to be for your code to work.</p>
         
+        <h3>What can you do with variables?</h3>
+            <p>You can do a lot with primitive variables, including adding, subtracting, multiplying, or dividing. Take a look at this example</p>
+            <pre>public class SampleVariables {
+    public static void main(String[] args) {
+        int radius = 4;
+        double pi = 3.1415;
+        double circleArea = pi * r * r;
+        System.out.println("Circle Area: " + circleArea);
+    
+        int x = (5/2) + 1;
+        System.out.println(x);
+    }
+}</pre>
+        <p>In the first section, I made an int variable called <code>radius</code> and set it equal to 4. Then I made a double called <code>pi</code> and another double called <code>circleArea</code>. Notice how I was able to set this variable equal to a mathematical expression. The code calculates the expression and then sets the variable equal to that value (it does use standard order of operations.</p>
+            
+        <p>In the second section, I made an int variable called <code>x</code>. You might think that the expression would divide 5 by 2 to get 2.5 and then add 1 to get 3.5, setting <code>x</code> equal to 3.5. It will not do this though because I declared <code>x</code> as an int. The code will essentially truncate (or cut off the decimal) 5/2 to 2 and then add 1 to get 3. This is often called “integer division".</p>
+            
+        <p>Lastly, notice how I used a <code>+</code> inside of my println statement. The <code>+</code> essentially says take the string and add something else to the end of it to make a new string.</p>
+            
+        <h3>Exercises: What will these code samples print></h3>
+        <pre>public class Exercise1 {
+    public static void main(String[] args) {
+        char l1 = 'I';
+    
+        String name = "Jim";
+        int age = (45/8) + 2;
+        System.out.println(l1 + " know " + name + ". He is " age);
+    }
+}</pre>
+        
+        <pre>public class Exercise2 {
+    public static void main(String[] args) {
+        int y = 2.0;
+        System.out.println(y);
+    }
+}</pre>
+            
+        <p>Answer 1: I konw Jim. He is </p>
+        <p>Answer 2: COMPILE ERROR: You can’t set an int variable equal to a double, but you can set a double equal to an int. There is a way around this called casting. Casting explicitly tells the compiler that you want to convert the variable into the specific type. You would cast a double into an int variable like this <code>int x = (int) 2.3;</code>.</p>
             
         <ul class="pager">
             <li class="previous"><a href="#"><span class="glyphicon glyphicon-menu-left"></span>Previous</a></li>

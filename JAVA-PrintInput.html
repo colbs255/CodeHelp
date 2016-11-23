@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Java</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="JS-navBar.js"></script>
+    <link rel="stylesheet" type="text/css" href="CSS-main.css">
+</head>
+<body>
+    <div class="jumbotron" id="jumbo">
+        <h1 class = "mainTitle" id="titleMain">Java</h1>
+    </div>
+    
+    <nav class="navbar navbar-inverse absBar" id="myBar">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myCollapseBar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+                <a class="navbar-brand" href="index.html">CodeHelp</a>
+          </div>
+          <div class="navbar-collapse collapse" id="myCollapseBar">
+            <ul class="nav navbar-nav">
+              <li><a href="JAVA-Intro.html">Java</a></li>
+              <li><a href="PYTHON-Intro.html">Python</a></li>
+              <li><a href="WEBDESIGN-Intro.html">HTML/CSS/JS</a></li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+      </nav>
+    
+    <div class="placeHolder"></div>
+
+    
+    <div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-2" id="mySideBar">
+            <nav class="navbar navbar-default" roll="navigation">
+                <div class="container-fluid" id="sideNavPadFixed">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle navbar-default" data-toggle="collapse" data-target="#mySideCollapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" id="sideBarTitle">Java Lessons</a>
+                </div>
+                <div class="nav-pills brand-pills nav-stacked collapse navbar-collapse" id="mySideCollapse">
+                    <ul class="nav">
+                    <li class="active"><a href="JAVA-Intro.html">Introduction to Java</a></li>
+                    <li><a href="JAVA-HelloWorld.html">Hello World</a></li>
+                    <li><a href="JAVA-Variables.html">Variables</a></li>
+                    <li><a href="JAVA-PrintInput.html">Print/Input</a></li>
+                    <li><a href="JAVA-MathFunctions.html">Math Functions</a></li>
+                    <li><a href="JAVA-ControlStatements.html">Control Statements</a></li>
+                    <li><a href="JAVA-Loops.html">Loops</a></li>
+                    <li><a href="JAVA-Arrays.html">Arrays</a></li>
+                    <li><a href="JAVA-Methods.html">Methods</a></li>
+                    <li><a href="JAVA-Conventions.html">Conventions</a></li>
+                    <li><a href="JAVA-Modifiers.html">Modifiers</a></li>
+                    <li><a href="JAVA-ClassesObjects.html">Classes and Objects</a></li>
+                    </ul>
+                </div>
+                </div>
+            </nav>
+    </div>
+        <div class="col-sm-10">
+        <h1 class="pageTitle">Print/Input</h1>
+        <h3>Fun Stuff</h3>
+    
+        <p>Now that you know about variables, you can learn how to design useful programs for actual users. To do this, you will have to save the input of a user. For example, if you wanted to design a program that finds the area of circle for a user, you would have to ask the user for a radius and then save the users response.</p>
+
+        <h3>Making a Scanner</h3>
+        <p>In Java, you use a scanner object to take in user input. Creating a scanner object requires 2 steps in Java.</p>
+        <p>Step 1: import your scanner class. Java has certain built in classes that you have to import from a package into your project to use. Importing the scanner requires only one statement that you put above your class declaration: <code>import Java.util.Scanner;</code>.</p>
+        
+        <pre>import java.util.Scanner;
+// see the import ^^
+public class ScannerExample {
+    public static void main(String[] args) {
+        
+    }
+}
+</pre>
+        <p>Step 2: Create a scanner object from the Scanner class you imported. We will learn more about objects later (I know I keep saying you will learn certain things later, but for now these things really wouldn’t be useful to you and probably wouldn’t make sense), but the general syntax for creating an object is as follows <code>objectType objectName = new objectType(Parameter);</code>. In the case of a scanner object, you will type <code>Scanner input = new Scanner(System.in);</code>. This creates a new scanner object named “input”, it could be named anything but most people usually name it “input” or “keyboard”.</p>
+            
+        <pre>import java.util.Scanner;
+public class ScannerExample {
+    public static vod main(String[] args) {
+    Scanner input = new Scanner(System.in);
+    
+    }
+}
+</pre>
+        
+        <h3>Using a Scanner</h3>
+        <p>Now you can use the scanner object to take in a user input. Usually you print out a question or prompt letting the user know what you want them to enter and use your scanner object like this.</p>
+        
+        <pre>import java.util.Scanner;
+public class CircleArea {
+    public static vod main(String[] args) {
+    Scanner input = new Scanner(System.in);
+    
+    System.out.println("Enter the raidus of the circle");
+    double radius = input.nextDouble();
+    
+    System.out.println("Area of circle: " + (radius * radius * 3.14));
+    }
+}
+</pre>
+        <p>You already know most of this. The only new thing is the <code>nextInt()</code>. This is called a method of your scanner object. A method is essentially a function or action (you will learn more about methods soon), and this method accepts your input from the keyboard as an int. You use a different method for each type of variable you want to get. Here are some other methods...</p>
+            
+        <ul>
+            <li>nextInt() : gets integer</li>
+            <li>nextDouble() : gets double</li>
+            <li>nextChar() : gets char</li>
+            <li>nextLine() : gets a String</li>
+        </ul>
+    
+        <p>***Note that nextString() is not a method. You use nextLine().</p>
+            
+        <h3>Scanner Exercise</h3>
+        <p>Try to write a program that asks for a user's name and then prints "Hello [user's name]".</p>
+        <pre>import java.util.Scanner;
+public class HelloUser {
+    public static vod main(String[] args) {
+    Scanner input = new Scanner(System.in);
+    
+    System.out.println("What is your name?");
+    String name = input.nextLine();
+    System.out.println("Hello " + name);
+}
+</pre>
+            
+        <h3>Printing Methods (functions)</h3>
+        <p>You already know <code>System.out.println()</code>. Now you will learn two more (they are pretty easy). They are <code> System.out.printf()</code> and <code> System.out.print()</code>.</p>
+            
+        <p><code>print()</code> is the same as <code>println()</code> except you it does not make a new line when it is called. For example, if you did <code> System.out.print(5)</code> on one line and then <code>System.out.print(2)</code> on the other then the console would print <b>52</b> not 5 on one line and 2 on the next like when you use <code>println()</code>.</p>
+            
+        <p><code>printf()</code> (print format) is pretty versatile and mainly used for printing out specific number of decimal places. You probably will not use it that often, but it is good to know. Here is an example, <code>System.out.printf(“%.2d”,  3.1415);</code>. This will print pi to 2 decimal places. You put the % sign in the statement to denote where you want the variable to go, then put a number after a decimal to denote how man decimal places you want, and the d tells the program that it is a double.</p>
+        
+        <h3>Practice</h3>
+        <p>Practice using your newfound input and output knowledge by making programs. You could make a program that finds the average of some values, finds the midpoint of 2 lines, automates the Pythagorean theorem or whatever you want.</p>
+        
+            
+        <ul class="pager">
+            <li class="previous"><a href="#"><span class="glyphicon glyphicon-menu-left"></span>Previous</a></li>
+            <li class="next"><a href="#">Next<span class="glyphicon glyphicon-menu-right"></span></a></li>
+        </ul>    
+        </div>
+    </div>
+    </div>
+    
+    <footer>
+        <p>Colby Chance 2016</p>
+      </footer>
+    
+</body>
+</html>
