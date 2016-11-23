@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Java</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="JS-navBar.js"></script>
+    <link rel="stylesheet" type="text/css" href="CSS-main.css">
+</head>
+<body>
+    <div class="jumbotron" id="jumbo">
+        <h1 class = "mainTitle" id="titleMain">Java</h1>
+    </div>
+    
+    <nav class="navbar navbar-inverse absBar" id="myBar">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myCollapseBar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+                <a class="navbar-brand" href="index.html">CodeHelp</a>
+          </div>
+          <div class="navbar-collapse collapse" id="myCollapseBar">
+            <ul class="nav navbar-nav">
+              <li class="active"><a href="JAVA-Intro.html">Java</a></li>
+              <li><a href="PYTHON-Intro.html">Python</a></li>
+              <li><a href="WEBDESIGN-Intro.html">HTML/CSS/JS</a></li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+      </nav>
+    
+    <div class="placeHolder"></div>
+
+    
+    <div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-2" id="mySideBar">
+            <nav class="navbar navbar-default" roll="navigation">
+                <div class="container-fluid" id="sideNavPadFixed">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle navbar-default" data-toggle="collapse" data-target="#mySideCollapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" id="sideBarTitle">Java Lessons</a>
+                </div>
+                <div class="nav-pills brand-pills nav-stacked collapse navbar-collapse" id="mySideCollapse">
+                    <ul class="nav">
+                    <li class="active"><a href="JAVA-Intro.html">Introduction to Java</a></li>
+                    <li><a href="JAVA-HelloWorld.html">Hello World</a></li>
+                    <li><a href="JAVA-Variables.html">Variables</a></li>
+                    <li><a href="JAVA-PrintInput.html">Print/Input</a></li>
+                    <li><a href="JAVA-MathFunctions.html">Math Functions</a></li>
+                    <li><a href="JAVA-ControlStatements.html">Control Statements</a></li>
+                    <li><a href="JAVA-Loops.html">Loops</a></li>
+                    <li><a href="JAVA-Arrays.html">Arrays</a></li>
+                    <li><a href="JAVA-Methods.html">Methods</a></li>
+                    <li><a href="JAVA-Conventions.html">Conventions</a></li>
+                    <li><a href="JAVA-Modifiers.html">Modifiers</a></li>
+                    <li><a href="JAVA-ClassesObjects.html">Classes and Objects</a></li>
+                    </ul>
+                </div>
+                </div>
+            </nav>
+    </div>
+        <div class="col-sm-10">
+        <h1 class="pageTitle">Arrays</h1>
+        <h3>What is an array?</h3>
+    
+        <p>An array is an indexed collection of variables of the same type</p>
+
+        <h3>Why would you use an array?</h3>
+        <p>a)	Let’s say you are a teacher and want to find the class average on your last test. You would probably enter in all of your test scores as variables like <code> double s1 = 89; double s2 = 92; double s3 = 84;</code> and repeat this for all students. Then you would probably find the average like this: <code>int average = (s1 + s2 + s3 + s4 + s5…..)/(numberOfStudents); </code>. This could get very tedious, and fortunately, there is a much faster method that utilizes arrays</p>
+            
+        <h3>Array Syntax</h3>
+        <p>Arrays can be created in several ways</p>
+        <pre>//General case
+varType[] arrayName = new varType[numberOfElements];
+
+//Example
+double[] testScores = new double[10];
+</pre>
+        <p>This will create an array that can hold a maximum of 10 doubles. Java knows this is an array because of the brackets after the variable type. You can also make an array like this <code>double testScores[] = new double[10];</code>, with the brackets at the end of the variable name, but usually it is done the first way.</p>
+        
+        <p>After initializing the array, you can set the values of the variables within the array like this:</p>
+        <pre>//General case
+arrayName[indexOfElement] = value;
+
+//Example
+testScores[0] = 89;
+testScores[1] = 92;
+testScores[2] = 84;
+</pre>
+        <p>Remember, <b>arrays start with 0, not 1</b>. Java beginners often forget this, leading to errors in their code, so remember that. So technically the 1st element in the array has an index of 0 like in the example above.</p>
+        <p>Java has a shortcut for declaring an array and assigning values to the elements in the array like this.</p>
+        <pre>General Case
+varType varName = [value0, value1, value2, value3];
+//Example
+String studentNames = ["Steve", "Bill", "Mark"];
+</pre>
+        <p>This way you do not have to waste your time writing code like this <code>studentNames[x] = “name”;</code> repeatedly.</p>
+        <p>Key Point: Arrays can be made of any variable type (String, int, double, char, etc), but an array can only hold 1 type (you can’t have a string in one element and a double in another element of an array).</p>
+            
+        <h3>Array Defaults</h3>
+        <p>When you create an int array or a double array like this <code>int[] numbers = new int[5]</code>. Each element will be assigned a value of 0 (0.0 if it’s a double) until you change the value.</p>
+            
+        <p>If you do the same with a string array, each element will automatically be assigned a value of “null” until you change the value. It won’t just be a blank string</p>
+        <p>For a boolean array, each element will automatically be assigned a value of false until you change the value</p>
+        <p>For a char array, each element will be assigned the null character ‘u/0000’.</p>
+            
+        <h3>Array Length</h3>
+        <p>You can find the number of elements within in array by typing <code>arrayName.length</code>. So if your array had 5 elements then the length of your array will be 5</p>
+            
+        <h3>Arrays with loops (where arrays are really useful)</h3>
+        <p>Arrays by themselves are nice for organizing data, but they are much more useful when you utilize them with loops (usually the for loop). Here is how the test average scenario at the beginning of the lesson could be programmed with an array and a simple for loop:</p>
+        <pre>for(arrayType variableName: arrayName) {
+    // do stuff with variable name
+}
+</pre>
+        <p>This code will essentially add one of the elements within the testScores array in each iteration of the for loop to the sum variable. x in the for loop starts at 0 and then the for loop runs as long as x is less than the length of the testScores array, so the for loop will have 3 iterations. Note how a &lt was used in the code and not &lt=. If &lt= was used then there would be an error because the code will be trying to access an element with an index of 3 in the code, and there are no elements with an index of 3. The highest index is 2 since there are 3 elements and the indexing starts at 0.</p>
+            
+        <h3>Enhanced for loop</h3>
+        <p>Enhanced for loops are special for loops specifically designed for arrays. They are much cleaner and simpler, but they do have some limitations. The general syntax of a for loop looks like this:</p>
+        <pre>int[] numbers = [23, 34, 35, 11, 10];
+int sum = 0;
+for(int x: numbers) {
+    sum += x;
+}</pre>
+            
+        <p>An enhanced for loop essentially makes a copy of the value of an element in each iteration of the loop. You can then use the value as if you were specifying that specific element of the array. Here is an example</p>
+        <pre>double[] testScores = [89, 92, 84];
+double sum = 0;
+for (int x = 0; x &lt; testScores.length; x++) {
+    sum += testScores[x];
+}
+double average = sum/testScores.length;</pre>
+        <p>In the example, an enhanced for loop is created using the numbers array. In each iteration of the for loop, a different copy of a value in the numbers array will be made and then utilized as <code>x</code>. X is essentially the same value as what <code>numbers[x]</code> would be in a normal for loop with x as the main variable</p>
+            
+        <p>This is useful because the code is abbreviated and you do not have to worry about the length of the array; however, you do need to be careful with enhanced for loops because they do have some limitations. You can’t use an enhanced for loop to change values of elements in an array. For example, if you put <code>x = 4</code> in the body of the for loop within the previous example, you might think that this would set all the elements in the for loop equal to 4, but it wouldn’t. This is because, x is actually a copy of the value of the element that is local to that for loop. X does not actually represent the elements of the for loop, so the code would essentially do nothing in the end.</p>
+            
+        <ul class="pager">
+            <li class="previous"><a href="#"><span class="glyphicon glyphicon-menu-left"></span>Previous</a></li>
+            <li class="next"><a href="#">Next<span class="glyphicon glyphicon-menu-right"></span></a></li>
+        </ul>    
+        </div>
+    </div>
+    </div>
+    
+    <footer>
+        <p>Colby Chance 2016</p>
+      </footer>
+    
+</body>
+</html>

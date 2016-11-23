@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Java</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="JS-navBar.js"></script>
+    <link rel="stylesheet" type="text/css" href="CSS-main.css">
+</head>
+<body>
+    <div class="jumbotron" id="jumbo">
+        <h1 class = "mainTitle" id="titleMain">Java</h1>
+    </div>
+    
+    <nav class="navbar navbar-inverse absBar" id="myBar">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myCollapseBar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+                <a class="navbar-brand" href="index.html">CodeHelp</a>
+          </div>
+          <div class="navbar-collapse collapse" id="myCollapseBar">
+            <ul class="nav navbar-nav">
+              <li class="active"><a href="JAVA-Intro.html">Java</a></li>
+              <li><a href="PYTHON-Intro.html">Python</a></li>
+              <li><a href="WEBDESIGN-Intro.html">HTML/CSS/JS</a></li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+      </nav>
+    
+    <div class="placeHolder"></div>
+
+    
+    <div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-2" id="mySideBar">
+            <nav class="navbar navbar-default" roll="navigation">
+                <div class="container-fluid" id="sideNavPadFixed">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle navbar-default" data-toggle="collapse" data-target="#mySideCollapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" id="sideBarTitle">Java Lessons</a>
+                </div>
+                <div class="nav-pills brand-pills nav-stacked collapse navbar-collapse" id="mySideCollapse">
+                    <ul class="nav">
+                    <li class="active"><a href="JAVA-Intro.html">Introduction to Java</a></li>
+                    <li><a href="JAVA-HelloWorld.html">Hello World</a></li>
+                    <li><a href="JAVA-Variables.html">Variables</a></li>
+                    <li><a href="JAVA-PrintInput.html">Print/Input</a></li>
+                    <li><a href="JAVA-MathFunctions.html">Math Functions</a></li>
+                    <li><a href="JAVA-ControlStatements.html">Control Statements</a></li>
+                    <li><a href="JAVA-Loops.html">Loops</a></li>
+                    <li><a href="JAVA-Arrays.html">Arrays</a></li>
+                    <li><a href="JAVA-Methods.html">Methods</a></li>
+                    <li><a href="JAVA-Conventions.html">Conventions</a></li>
+                    <li><a href="JAVA-Modifiers.html">Modifiers</a></li>
+                    <li><a href="JAVA-ClassesObjects.html">Classes and Objects</a></li>
+                    </ul>
+                </div>
+                </div>
+            </nav>
+    </div>
+        <div class="col-sm-10">
+        <h1 class="pageTitle">Loops</h1>
+    
+        <p>In this section, you will start to get a better idea of the power of computing. As you probably know, computers can repeatedly do calculations or basic actions really quickly, and you are about to learn how to make them do that. It is done through something called a “loop”. A loop essentially repeats a block of code until some kind of end condition is met. A basic case for a loop would be a factorial (Ex: 4 factorial = 4! = 4 x 3 x 2 x 1 = 24). You could put a number like 5 into the loop, and then the loop will subtract 1 from 5 to get 4 and multiply that by 5, then subtract 1 from 4 to get 3 and repeat. The main types of loops are “for loops” and “while loops”. There is also a special kind of loop called the “enhanced for loop” which we will learn in the next lesson, and the “do while loop” which isn’t used as often as a normal while loop.</p>
+
+        <h3>while loop</h3>
+    
+        <p>A while loop looks like this:</p>
+        <pre>while (testCondition) {
+    //if test condition is true then this code will run
+}
+
+</pre>
+        <p>A while loop is essentially an if statement that keeps repeating. The code tests if something is true, and if it is true then the code block will run, and then it will test the condition again. If the condition is true again then code will run again, if not then the program will move on. So in English: “While this condition is true, do this. If the condition is false, move on.” Here is an example with factorials.</p>
+        <pre>int factorialNum = 6;
+int answer = 1;
+while (factorialNum > 0) {
+    answer *= factorialNum;
+    factorialNum--;
+}
+System.out.println("Answer: " + answer);
+</pre>
+        <p>This code calculates “6!”. It starts out by checking if <code>factorialNum</code> is greater than 0, and since 6 is greater than 0, the code in the brackets runs. The program multiplies 1 by 6 then subtracts 1 from 6 to get 5 and then repeats, eventually forming the answer.</p>
+        
+        <h3>for loop</h3>
+        <p>A for loop is like a condensed version of a while loop. Here is the general syntax:</p>
+        <pre>for (initiating condition; end condition; do this after each iteration) {
+    //code
+}
+</pre> 
+        <p>So in the while loop example, a variable called factorialNum was created and the while loop kept modifying it and checking if it was greater than 0. A for loop does all of this in one line. Here is the factorial code as a for loop:</p>
+        <pre>int answer = 1;
+for (int factorialNum = 6; factorialNum > 0; factorialNum--) {
+    answer *= factorialNum;
+}
+</pre>
+        
+        <p>The first parameter (<code>int factorialNum  = 6</code>) in the for loop is ran only when the for loop starts, the second parameter (<code>factorialNum > 0</code>) is tested at the beginning of each iteration, and the third parameter is ran after each iteration of the for loop</p>
+            
+        <p>Notice that there are only 2 semicolons in the parameters of a for loop. You do not put a third one at the end. Also make sure you realize how this is equivalent to the code in the while loop example. For loops are usually the most common loops that you will see since they are essentially shorthand for while loops.</p>
+        
+        <h3>do while loop</h3>
+        <p>General sytnax:</p>
+        <pre>do {
+    //code
+} while(testCondition);
+</pre>
+        <p>A do while loop works the exact same way as a while loop except the code in the loop will always run at least one time. One iteration will occur within the loop and then the test condition will be checked. So you should only use while loops when you are certain that you want the code within the while loop to occur at least once. With that being said, do while loops are not that common; usually while loops or for loops are used</p>
+        
+            
+        <ul class="pager">
+            <li class="previous"><a href="#"><span class="glyphicon glyphicon-menu-left"></span>Previous</a></li>
+            <li class="next"><a href="#">Next<span class="glyphicon glyphicon-menu-right"></span></a></li>
+        </ul>    
+        </div>
+    </div>
+    </div>
+    
+    <footer>
+        <p>Colby Chance 2016</p>
+      </footer>
+    
+</body>
+</html>
