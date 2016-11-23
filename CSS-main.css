@@ -12,10 +12,6 @@
     border-radius: 0;
 }
 
-#myBar {
-    min-width: 500px;
-}
-
 .absBar {
     z-index: 9999;
     position: absolute;
@@ -57,7 +53,6 @@ img {
 }
 
 
-
 .cell {
     padding: 5px;
     color: black;
@@ -83,4 +78,21 @@ footer > p {
 .pageTitle {
     text-align: center;
     border-bottom: 2px solid black;
+}
+
+
+
+
+#sideNavPadFixed {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+#mySideCollapse {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+#sideBarTitle {
+    color: black;
 }
