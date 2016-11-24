@@ -101,10 +101,7 @@ footer > p {
     padding: 0px;
 }
 
-#sideHeader {
-    padding-left: 10px;
-}
-
 #sideNavPadFixed .navbar-header {
     padding-left: 2px;
+    padding-right: 15px;
 }
