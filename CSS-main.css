@@ -33,10 +33,6 @@
     padding-right: 13%;
 }
 
-#jumbo {
-    
-}
-
 .cellTitle {
     text-align: center;
 }
@@ -93,6 +89,22 @@ footer > p {
     padding-right: 0px;
 }
 
+#mySideCollapse ul li a {
+    padding-left: 30px;
+}
+
 #sideBarTitle {
     color: black;
+}
+
+#mySideBar {
+    padding: 0px;
+}
+
+#sideHeader {
+    padding-left: 10px;
+}
+
+#sideNavPadFixed .navbar-header {
+    padding-left: 2px;
 }
