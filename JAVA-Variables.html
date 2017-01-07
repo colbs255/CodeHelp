@@ -13,7 +13,7 @@
     <div class="jumbotron" id="jumbo">
         <h1 class = "mainTitle" id="titleMain">Java</h1>
     </div>
-    
+
     <nav class="navbar navbar-inverse absBar" id="myBar">
         <div class="container-fluid">
           <div class="navbar-header">
@@ -34,10 +34,10 @@
           </div><!--/.nav-collapse -->
         </div>
       </nav>
-    
+
     <div class="placeHolder"></div>
 
-    
+
     <div class="container-fluid">
     <div class="row">
         <div class="col-sm-2" id="mySideBar">
@@ -74,11 +74,11 @@
         <div class="col-sm-10">
         <h1 class="pageTitle">Variables</h1>
         <h3>What is a variable?</h3>
-        <p>You essentially store all information in variables. You can store a number, name, age, color, or just about anything in a variable. Understanding variables is very important in programming in general.</p>
+        <p>You essentially store all information in variables. You can store a number, name, age, color, or just about anything in a variable. Understanding variables is very important for programming in general.</p>
 
         <h3>Types of Variables</h3>
         <p>Java essentially has 2 main types of variables: primitive variables and reference variables. Reference variables are special variables that “reference” objects, and we will get to objects later. For now, we will focus on primitives (objects are essentially a special collection of primitives). Primitive variables are basic variables stored by bits, and Java has eight primitive variables: boolean, byte, char, short, int, long, float, and double. Don’t worry, you will really only use boolean, char, int and double though. The others are generally not very useful compared to these main 4.</p>
-        
+
         <h3>Variable Syntax</h3>
         <p>Declaring a variable generally has this syntax <code>variableType variableName = variableValue;</code>. For example <code>int billsAge = 21;</code> . This statement essentially says make a variable of the type <code>int</code> (short for integer) called <code>billsAge</code> and set its value equal to 21. Whenever you make a new variable, <b>you have to tell Java its type and assign it a name</b>, but you do <b>not</b> have to immediately assign it a value. For example, you can do <code>int billsAge;</code> and then on another line type <code>billsAge = 21;</code>. This is equivalent to the previous code example. When you name a variable and say its type, this is called <b>declaring</b> a variable, and when you give it a value for the first time, this is called <b>instantiating</b> a variable. After instantiating a variable, you can later <b>assign</b> it a new value by typing <code>variableName = newValue</code>. For example, <code>billsAge = 22</code>. These concepts apply to all types of values, so make sure you learn them. Here are some examples.</p>
         <ul>
@@ -89,74 +89,74 @@
             <li><code>hasWon = true;</code></li>
         </ul>
         <p>Also, remember that variable names <b>are case sensitive</b>. So <code>maggiesAge</code> is <b>not</b> the same as <code>MaggiesAge</code>.</p>
-            
+
         <h3>int</h3>
             <p>“int” short for integer, is number that can never be a decimal (i.e. -1, 0, 1, 2, etc..) and can hold values from -2^31 to 2^31 - 1 (-2,147,483,648 to 2,147,483,647). If you try to make an int a decimal you will get errors in your code. They are good for representing simple whole numbers. If you try to divide an int by an int, the answer will be truncated. For example, if you do <code>int jimsAge = 9/4;</code>, jimsAge will be set to <b>2</b> not 2.25! Try to be mindful of this when programming.</p>
-            
+
         <h3>double</h3>
-            <p>A “double” is like an int, but it can contain a decimal and can hold numbers very large numbers. If you are dealing with numbers that can have a chance of not being whole, you should use a double. Double values will not truncate numbers like ints. For example, if you do <code>double jimsAge = 9/4</code>, jimsAge will be set to <b>2.25</b> not 2.</p>
-            
+            <p>A “double” is like an int, but it can contain a decimal and can hold very large numbers. If you are dealing with numbers that can have a chance of not being whole, you should use a double. Double values will not truncate numbers like ints. For example, if you do <code>double jimsAge = 9/4</code>, jimsAge will be set to <b>2.25</b> not 2.</p>
+
         <h3>boolean</h3>
             <p>A “boolean” can either be set to <code>true</code> or <code>false</code>, nothing else. Boolean variables are often used to make code more readable. For example, you can type <code>boolean hasGlasses = true;</code>. Later on we will discuss “if statements” which will do something only if a condition is true, and Booleans are often used in these if statements. For example, <code>if (hasGlasses) System.out.println(“The person has glasses”);</code>. This statement will only print if the variable is set to true. You can also set Booleans equal to expressions like this <code>boolean isGreater = (x > 5);</code>. This statement will set the boolean variable to true if x is greater than 5. If it is not greater, then the variable will be set to false.</p>
             <p>Also, notice that <code>true</code> and <code>false</code> <b>do not use quotation marks</b> and are not capitalized. This is because these are special words reserved for the Java language, so never set a boolean equal to “true” or “false” or True or False. You will only use <code>true</code> or <code>false</code>.</p>
-            
+
         <h3>char</h3>
             <p>A “char” is just a character. You can set a char equal to just about any character including a number, symbol, or letter. Here is an example of a char declaration and instantiation: <code>char favoriteLetter = ‘m’;</code>. Notice that you wrap chars in single quotes, so do not forget them. While you might not use chars very often while programming, they are important to understand for the next variable we are about to discuss, Strings.</p>
-            
+
         <h3>String</h3>
             <p>A string is essentially a collection of chars. They can be used to represent a word, a phrase, a sentence, or even a paragraph. String variables are technically not primitives, they are reference variables that represent objects. However, Java essentially treats Strings them as primitives, and you will learn more about this later. For now, just know what a string is and how you use them like this: <code>String myName = “Steve”;</code>. Notice that <code>String</code> is capitalized and it always has to be for your code to work.</p>
-        
+
         <h3>What can you do with variables?</h3>
             <p>You can do a lot with primitive variables, including adding, subtracting, multiplying, or dividing. Take a look at this example</p>
             <pre>public class SampleVariables {
     public static void main(String[] args) {
         int radius = 4;
         double pi = 3.1415;
-        double circleArea = pi * r * r;
+        double circleArea = pi * radius * radius;
         System.out.println("Circle Area: " + circleArea);
-    
+
         int x = (5/2) + 1;
         System.out.println(x);
     }
 }</pre>
-        <p>In the first section, I made an int variable called <code>radius</code> and set it equal to 4. Then I made a double called <code>pi</code> and another double called <code>circleArea</code>. Notice how I was able to set this variable equal to a mathematical expression. The code calculates the expression and then sets the variable equal to that value (it does use standard order of operations.</p>
-            
-        <p>In the second section, I made an int variable called <code>x</code>. You might think that the expression would divide 5 by 2 to get 2.5 and then add 1 to get 3.5, setting <code>x</code> equal to 3.5. It will not do this though because I declared <code>x</code> as an int. The code will essentially truncate (or cut off the decimal) 5/2 to 2 and then add 1 to get 3. This is often called “integer division".</p>
-            
-        <p>Lastly, notice how I used a <code>+</code> inside of my println statement. The <code>+</code> essentially says take the string and add something else to the end of it to make a new string.</p>
-            
+        <p>In the first section, an int variable called <code>radius</code> was initialiezed and set equal to 4. Then a double called <code>pi</code> and another double called <code>circleArea</code> were initialized. Notice how this variable was set equal to a mathematical expression. The code calculates the expression and then sets the variable equal to that value (it does use standard order of operations.</p>
+
+        <p>In the second section, an int variable called <code>x</code> was created. You might think that the expression would divide 5 by 2 to get 2.5 and then add 1 to get 3.5, setting <code>x</code> equal to 3.5. It will not do this though because the 2 and the 5 in the expression are ints (put a .0 at the end to make them doubles). The code will essentially truncate (or cut off the decimal) 5/2 to 2 and then add 1 to get 3. This is often called “integer division".</p>
+
+        <p>Lastly, notice how a <code>+</code> was used inside of the println statement. The <code>+</code> essentially says take the string and add something else to the end of it to make a new string.</p>
+
         <h3>Exercises: What will these code samples print></h3>
         <pre>public class Exercise1 {
     public static void main(String[] args) {
         char l1 = 'I';
-    
+
         String name = "Jim";
         int age = (45/8) + 2;
         System.out.println(l1 + " know " + name + ". He is " age);
     }
 }</pre>
-        
+
         <pre>public class Exercise2 {
     public static void main(String[] args) {
         int y = 2.0;
         System.out.println(y);
     }
 }</pre>
-            
-        <p>Answer 1: I konw Jim. He is </p>
+
+        <p>Answer 1: I konw Jim. He is 7</p>
         <p>Answer 2: COMPILE ERROR: You can’t set an int variable equal to a double, but you can set a double equal to an int. There is a way around this called casting. Casting explicitly tells the compiler that you want to convert the variable into the specific type. You would cast a double into an int variable like this <code>int x = (int) 2.3;</code>.</p>
-            
+
         <ul class="pager">
             <li class="previous"><a href="JAVA-HelloWorld.html"><span class="glyphicon glyphicon-menu-left"></span>Previous</a></li>
             <li class="next"><a href="JAVA-PrintInput.html">Next<span class="glyphicon glyphicon-menu-right"></span></a></li>
-        </ul>    
+        </ul>
         </div>
     </div>
     </div>
-    
+
     <footer>
         <p>Colby Chance 2016</p>
       </footer>
-    
+
 </body>
 </html>

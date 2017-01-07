@@ -13,7 +13,7 @@
     <div class="jumbotron" id="jumbo">
         <h1 class = "mainTitle" id="titleMain">Java</h1>
     </div>
-    
+
     <nav class="navbar navbar-inverse absBar" id="myBar">
         <div class="container-fluid">
           <div class="navbar-header">
@@ -34,10 +34,10 @@
           </div><!--/.nav-collapse -->
         </div>
       </nav>
-    
+
     <div class="placeHolder"></div>
 
-    
+
     <div class="container-fluid">
     <div class="row">
         <div class="col-sm-2" id="mySideBar">
@@ -74,43 +74,44 @@
         <div class="col-sm-10">
         <h1 class="pageTitle">Hello World</h1>
         <h3>Getting Started</h3>
-    
+
         <p>We are about to write our first program. If you are using a text editor, then click <b>File</b> > <b>New</b> (<kbd>cmd + N</kbd> on mac or <kbd>ctrl + N</kbd> on windows) then <b>File</b> > <b>Save</b> (<kbd>cmd + S</kbd> on mac or <kbd>ctrl + S</kbd> on windows) and name it <code>HelloWorld.java</code>. You can save the program anywhere you want, but remember where you save it.</p>
 
         <h3>Your First Program</h3>
         <pre>public class HelloWorld {
     public static void main(String[] args) {
         System.out.println("Hello World");
+        // prints hello world
     }
 }</pre>
         <p>If you are using an IDE, then just press the run button (should look like a play button) and move on to the next section. If you are using a text editor, then running the program is a little more complicated because you need to use terminal or command prompt. On a mac, press <kbd>cmd + space</kbd> and type “ter” then select the terminal application. Now you have to navigate to the directory where your file is located. Find the folder that your file exists it then type <code>cd</code> on the terminal and drag the folder into your terminal. This should put the path to your file into your terminal and look something like this <code>cd ~/Users/username/Documents</code>. You have just told the terminal to navigate to the directory your class is in. Now you can compile your java file. Type <code>javac</code> and then the name of your file like this <code>javac HelloWorld.java</code>. If you type <code>ls</code> you should see a list of the files in your directory and “HelloWorld.class” should be one of them. This is the compiled version of your code. Now type <code>java HelloWorld</code> and your program should run. If you are on Windows, go to the “command prompt” and then do the same thing but replace the <code>ls</code> command with <code>dir</code>. <b>Practice doing this!</b> You will be doing this every time you run your code.</p>
-            
+
         <h3>What does this code mean?</h3>
         <p>Your Java code will always go inside of a class. We will go into more detail about classes, but for now just think of a class as a container for your code. Your class should always be named the same thing as the name of the file. In this example, your class name is “HelloWorld” and your file name is “HelloWorld.java”.</p>
-            
+
         <p>This line contains many words that are important to Java and it is okay if they do not make sense initially. For now, just know that this line denotes the header of your main method. A method is essentially a function or a block of code, and the main method is the first method that your program will run as soon as you run the program.</p>
-            
+
         <p>Your main code is the <code>System.out.println()</code>. This is a special method that will print text to your terminal whenever you call it. In this case, your text is “Hello world”. Notice the text is inside of inside of quotation marks. If you do not use quotation marks, then the code will not work. This is because text is represented as something called a String in Java. We will discuss strings a lot more soon.</p>
-            
+
         <p>Notice that the <code>println()</code> statement ends with a semicolon. All Java statements end in a semicolon. The semicolon tells Java that this is the end of the statement. Java does not care if you put code on a different line, it only looks at the semicolons.</p>
-            
+
         <p>The <code>// prints hello world</code> part is called a <b>comment</b>. A comment is something that you can type into the program, and the compiler will never see or use it. They are very handy for notes in your code.</p>
-            
+
         <h3>Does this seem hard?</h3>
         <p>If this seems complicated right now, that is perfectly normal. All of these concepts will make a lot more sense very soon. The point of this is just to show you how to make a working program and get you excited about programming</p>
-        
-            
+
+
         <ul class="pager">
             <li class="previous"><a href="JAVA-Intro.html"><span class="glyphicon glyphicon-menu-left"></span>Previous</a></li>
             <li class="next"><a href="JAVA-Variables.html">Next<span class="glyphicon glyphicon-menu-right"></span></a></li>
-        </ul>    
+        </ul>
         </div>
     </div>
     </div>
-    
+
     <footer>
         <p>Colby Chance 2016</p>
       </footer>
-    
+
 </body>
 </html>
