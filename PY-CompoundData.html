@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Python</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="JS-navBar.js"></script>
+    <link rel="stylesheet" type="text/css" href="CSS-main.css">
+</head>
+<body>
+    <div class="jumbotron" id="jumbo">
+        <h1 class = "mainTitle" id="titleMain">Python</h1>
+    </div>
+    
+    <nav class="navbar navbar-inverse absBar" id="myBar">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myCollapseBar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+                <a class="navbar-brand" href="index.html">CodeHelp</a>
+          </div>
+          <div class="navbar-collapse collapse" id="myCollapseBar">
+            <ul class="nav navbar-nav">
+              <li><a href="JAVA-Intro.html">Java</a></li>
+              <li class="active"><a href="PYTHON-Intro.html">Python</a></li>
+              <li><a href="WEBDESIGN-Intro.html">HTML/CSS/JS</a></li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+      </nav>
+    
+    <div class="placeHolder"></div>
+
+    
+    <div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-2" id="mySideBar">
+            <nav class="navbar navbar-default" roll="navigation">
+                <div class="container-fluid" id="sideNavPadFixed">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle navbar-default" data-toggle="collapse" data-target="#mySideCollapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" id="sideBarTitle">Python Lessons</a>
+                </div>
+                <div class="nav-pills brand-pills nav-stacked collapse navbar-collapse" id="mySideCollapse">
+                    <ul class="nav">
+                    <li class="active"><a href="JAVA-Intro.html">Introduction to Pyhthon</a></li>
+                    <li><a href="PY-HelloWorld.html">Hello World</a></li>
+                    <li><a href="PY-Variables.html">Variables</a></li>
+                    <li><a href="PY-PrintInput.html">Print/Input</a></li>
+                    <li><a href="PY-MathFunctions.html">Math Functions</a></li>
+                    <li><a href="PY-ControlStatements.html">Control Statements</a></li>
+                    <li><a href="PY-CompoundData.html">Compound Data Types</a></li>
+                    <li><a href="PY-Loops.html">Loops</a></li>
+                    <li><a href="PY-Functions.html">Functions</a></li>
+                    <li><a href="PY-Modules.html">Modules</a></li>
+                    <li><a href="PY-ClassesObjects.html">Classes and Objects</a></li>
+                    </ul>
+                </div>
+                </div>
+            </nav>
+    </div>
+        <div class="col-sm-10">
+        <h1 class="pageTitle">Compound Data Types</h1>
+        <p>A compound data structure is essentially a special variable that can hold multiple basic data types like ints, strings, or floats. The main ones in Python are lists, tuples, and dictionaries.</p>
+
+        <h3>List</h3>
+        <p>Let’s say you are Usain Bolt and you want to record all your 100m dash times. You can do this with a list. The general syntax for a list is</p>
+        <pre>listName = [val1, val2, val3]</pre>
+        <p>To record your 100m dash times, you can make a list with your 100m dash time values like this:</p>
+        <pre>boltsTimes  = [9.58, 9.71, 9.62, 9.68]</pre>
+            
+        <p>Each value in the list can be accessed with an index. Remember this, programs usually start with 0 rather than 1, so the first element in a list actually has the index 0, the second has 1, and the third has 2. The syntax for accessing an element in a list is <code>listName[index]</code>, so if you wanted to use the first element in this example you would type <code>boltsTimes[0]</code>, meaning you could print the first value in the list by typing</p>
+            
+        <pre>print(boltsTimes[0])</pre> 
+        <p>Another key thing to note is that lists can hold variables of different types. So you could make a list holding a string, an int, and a float like this. <code>list = [“Maggie”, 21, 2.34]</code>.</p>
+            
+        <h3>Tuple</h3>
+        <p>A tuple works the same way that a list does, but has a couple minor differences. The first is that tuples are immutable, meaning you can’t change the values of a tuple or change its size once it is created, but you can with a list. They are different syntactically because they use parentheses instead of brackets. Here is what they look like:</p>
+        <pre>tupleName = (val1, val2, val3)</pre>
+            <p>So the boltsTimes example would look like this as a tuple</p>
+            <pre>boltsTmes = (9.58, 9.71, 9.62, 9.68)</pre>
+        <p>Unlike lists, you would get an error if you tried to change the value of an element in a tuple like this</p>
+        <pre>boltsTimes[0] = 9.59</pre>
+            
+        <h3>Use a tuple or a list?</h3>
+        <p>Tuples should be used if you don’t plan to change the values of the variable after initializing the variable because the tuple has slightly better performance. If you have to change any data later then you should list. Most of the time you will probably be using a list.</p>
+            
+        <h3>Dictionary</h3>
+        <p>Dictionaries are similar to lists, but each element is indexed by unique keys rather than just a range of numbers starting with 0. Think of a dictionary as a list of key and value pairs. Here is the general syntax</p>
+        <pre>dictName = {key1 : val1, key2 : val2, key3 : val3}</pre>
+        <p>Here is an example of dictionary that maps peoples first names to their ages</p>
+        <pre>namesAges = {“Marky” :  20, “Ricky” : 21, “Danny” : 23, “Terry” : 25, “Mikey” : 24, “Davey” : 25, “Timmy” : 26, “Tommy” : 23, “Joey” : 24, “Robby” : 22, “Johnny” : 24, “Brian” : 26}</pre>
+        <p>You can now print the age of Joey by typing:</p>
+        <pre>print(namesAges[“Joey”)</pre>
+        <p>Notice how keys can have the same values, but no 2 values can have the same key. Every key in dictionary must be unique. If you typed <code>namesAges[“Joey”] = 27</code>. The value that corresponds to the Joey key will be changed; it would not add a new pair. You can add a new pair, however, if you do the same thing with a unique key.</p>
+
+            
+        <ul class="pager">
+            <li class="previous"><a href="PY-ControlStatements.html"><span class="glyphicon glyphicon-menu-left"></span>Previous</a></li>
+            <li class="next"><a href="PY-Loops.html">Next<span class="glyphicon glyphicon-menu-right"></span></a></li>
+        </ul>
+        </div>
+    </div>
+    </div>
+    
+    <footer>
+        <p>Colby Chance 2016</p>
+      </footer>
+    
+</body>
+</html>

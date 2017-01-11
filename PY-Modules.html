@@ -71,21 +71,31 @@
             </nav>
     </div>
         <div class="col-sm-10">
-        <h1 class="pageTitle">Hello World</h1>
-        <h3>Getting Started</h3>
-        <p>You are about to write your first program. If you are using a text editor, then click <b>File</b> > <b>New</b> (<kbd>cmd + N</kbd> on mac or <kbd>ctrl + N</kbd> on windows) then <b>File</b> > <b>Save</b> (<kbd>cmd + S</kbd> on mac or <kbd>ctrl + S</kbd> on windows) and name it <code>HelloWorld.py</code>. You can save the program anywhere you want, but remember where you save it.</p>
+        <h1 class="pageTitle">Modules</h1>
+        <p>In Python, you can get functionality and data of other Python programs by importing modules and packages. A module is essentially just a python file, and you can use modules from different places to reduce the amount of coding you have to do. Importing a module looks like this:</p>
+<pre>import moduleName</pre>
+	<p>A good example of a module is the Python math module. You would import it like this</p>
+<pre>import math</pre>
+	<p>Now you can use various features from the math module rather than recoding the features from scratch like this</p>
+<pre>math.functionName()</pre>
+	<p>Here is an example of the math module being used</p>
+<pre>import math
+math.ceil(3.4) #returns 4, the smallest integer greater than x (rounds up)
+math.factorial(4) #returns 24, the factorial of x
+math.pow(2,3) # returns 8, x to the power of y
+math.pi #variable for pi
+math.e #variable for e
+math.sin(math.pi) #returns 0, the sin of x radians (there are also tan and cos functions)
+</pre>
 
-        <h3>Your First Program</h3>
-        <pre>print(“Hello World”)
-# prints hello world</pre>
-        <p>Just type that… and that’s your program. Python is cool. If you’re coming from a language like Java then this might seem like magic to you because it is much simpler to make a basic hello world program in Python. If you are using an IDE, then just press the run button (should look like a play button) and move on to the next section. If you are using a text editor, then running the program is a little more complicated because you need to use terminal or command prompt. On a mac, press <kbd>cmd + space</kbd> and type “ter” then select the terminal application. Now you have to navigate to the directory where your file is located. Find the folder that your file exists it then type <code>cd</code> on the terminal and drag the folder into your terminal. This should put the path to your file into your terminal and look something like this <code>cd ~/Users/username/Documents</code>. You have just told the terminal to navigate to the directory your class is in. Now type <code>python HelloWorld.py</code> and your program should run. If you are on Windows, go to the “command prompt” and then do the same thing but replace the <code>ls</code> command with <code>dir</code>. <b>Practice doing this!</b> You will be doing this every time you run your code if you’re using a text editor</p>
+
+        <h3>Creating Modules</h3>
+        <p>To create a module, you just make a python file. All you have to do is type up your code with all the functions and data you want then save it with extension .py, and you can import it like it’s any other module as long as it belongs in the same folder as your project.</p>
             
-        <h3>What does this code mean?</h3>
-        <p>The code is using a function ( essentially method in Java) called print that takes in some sort of data and then prints it to the console. The data that you are printing in this case is called a string, which is essentially just normal text. Notice that there is a no semicolon or anything at the end of the statements, this is because Python actually uses lines to break up each line of code unlike Java that uses semicolons.</p>
             
         <ul class="pager">
-            <li class="previous"><a href="PY-HelloWorld.html"><span class="glyphicon glyphicon-menu-left"></span>Previous</a></li>
-            <li class="next"><a href="PY-Variables.html">Next<span class="glyphicon glyphicon-menu-right"></span></a></li>
+            <li class="previous"><a href="PY-Functions.html"><span class="glyphicon glyphicon-menu-left"></span>Previous</a></li>
+            <li class="next"><a href="PY-ClassesObjects.html">Next<span class="glyphicon glyphicon-menu-right"></span></a></li>
         </ul>
         </div>
     </div>

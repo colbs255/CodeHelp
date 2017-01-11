@@ -97,11 +97,11 @@ footer > p {
     color: black;
 }
 
-<<<<<<< HEAD
 #changedPadding {
     padding-left: 8%;
     padding-right: 8%;
-=======
+}
+
 #mySideBar {
     padding: 0px;
 }
@@ -109,5 +109,6 @@ footer > p {
 #sideNavPadFixed .navbar-header {
     padding-left: 15px;
     padding-right: 15px;
->>>>>>> 29aaafb0a79eec309a5e2510b83c263ea668acac
 }
+    
+

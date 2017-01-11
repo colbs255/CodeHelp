@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Python</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="JS-navBar.js"></script>
+    <link rel="stylesheet" type="text/css" href="CSS-main.css">
+</head>
+<body>
+    <div class="jumbotron" id="jumbo">
+        <h1 class = "mainTitle" id="titleMain">Python</h1>
+    </div>
+    
+    <nav class="navbar navbar-inverse absBar" id="myBar">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myCollapseBar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+                <a class="navbar-brand" href="index.html">CodeHelp</a>
+          </div>
+          <div class="navbar-collapse collapse" id="myCollapseBar">
+            <ul class="nav navbar-nav">
+              <li><a href="JAVA-Intro.html">Java</a></li>
+              <li class="active"><a href="PYTHON-Intro.html">Python</a></li>
+              <li><a href="WEBDESIGN-Intro.html">HTML/CSS/JS</a></li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+      </nav>
+    
+    <div class="placeHolder"></div>
+
+    
+    <div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-2" id="mySideBar">
+            <nav class="navbar navbar-default" roll="navigation">
+                <div class="container-fluid" id="sideNavPadFixed">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle navbar-default" data-toggle="collapse" data-target="#mySideCollapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" id="sideBarTitle">Python Lessons</a>
+                </div>
+                <div class="nav-pills brand-pills nav-stacked collapse navbar-collapse" id="mySideCollapse">
+                    <ul class="nav">
+                    <li class="active"><a href="JAVA-Intro.html">Introduction to Pyhthon</a></li>
+                    <li><a href="PY-HelloWorld.html">Hello World</a></li>
+                    <li><a href="PY-Variables.html">Variables</a></li>
+                    <li><a href="PY-PrintInput.html">Print/Input</a></li>
+                    <li><a href="PY-MathFunctions.html">Math Functions</a></li>
+                    <li><a href="PY-ControlStatements.html">Control Statements</a></li>
+                    <li><a href="PY-CompoundData.html">Compound Data Types</a></li>
+                    <li><a href="PY-Loops.html">Loops</a></li>
+                    <li><a href="PY-Functions.html">Functions</a></li>
+                    <li><a href="PY-Modules.html">Modules</a></li>
+                    <li><a href="PY-ClassesObjects.html">Classes and Objects</a></li>
+                    </ul>
+                </div>
+                </div>
+            </nav>
+    </div>
+        <div class="col-sm-10">
+        <h1 class="pageTitle">Classes and Objects</h1>
+        <p>Now you can be introduced to Object Oriented Programming (OOP). Object Oriented Programming is about creating your own types of data (objects) and manipulating them in your own specified way. This makes modelling things in the real world much easier and organized. While Python is not exactly an object-oriented language, it does support object-oriented programming. Python can utilize classes and objects. A class is a guideline (often called blueprint) for the structure of something (an object). A class defines what an object can do, what can be done to an object, and what sort of attributes an object has. An object is the actual instantiation of the class.</p>
+
+        <p>Let’s say you wanted to make a video game with airplanes. You could make a class that defines what an airplane is in your videogame, giving it properties such as top speed, current speed, and a name by declaring variables for these attributes. You could also define its actions like taking off, changing speed, and landing. You would then instantiate your class by making a plane object that you can manipulate in the game. The general syntax of a class looks like this:</p>
+<pre>class ClassName:
+    attribute1Name = data
+    attribute2Name  = data
+	
+    def function1(params):
+        #function1 body
+    def function2(params):
+        #function2 body
+</pre>
+	<p><b>Notice how just like methods and control statements, everything that belongs to a class must be indented to the right one level.</b>
+	Here is an example of an airplane class would look like:</p>
+<pre>class Airplane:
+    topSpeed = 200
+    currentSpeed = 0
+    name = “Spruce Goose”
+
+    def takeOff():
+        print(“We are taking off now”)
+    def changeSpeed(speedChange):
+        currentSpeed += speedChange
+        if currentSpeed > topSpeed:
+            currentSpeed = topSpeed
+    def land():
+        print(“We are landing”)	
+</pre>
+        <h3>Instantiating Classes and using Objects</h3>
+        <p>Instantiating a class or creating an object looks like this:</p>
+<pre>objectName = className(parameters)</pre>
+        <p>The parameters are passed into the constructor which you will learn in the next part of this lesson. In the airplane example, you would instantiate an airplane like this:</p>
+<pre>myPlane = Airplane()</pre>
+    <h3>Constructors</h3>
+	<p>Congrats, you have now learned how to create classes and instantiate objects from a class, but what if you want each object to have unique attributes when you create them? You could then give each object unique attributes, like a name and top speed in the airplane example. You can do that in Python with constructors. A constructor is a special function that is called every time you instantiate an object, and has this general syntax:</p>
+<pre>def __init__(self, paramaters):
+    #constructor body
+</pre>
+	<p>The self is a variable for the object itself. Many languages pass this in automatically, but Python does not, so remember to make self as one of your parameters each time you create a constructor. Also, keep in mind that there are two underscores on each side of the init keyword not one. A constructor for the airplane class would look like this:</p>
+<pre>def __init__(self, top, current, name):
+    self.topSpeed = topSpeed
+    self.current = current
+    self.name = name
+</pre>
+	<p>This will take in top, current, and name as parameters, and then set the variables that belong to the airplane object equal to these parameters. This allows you to create unique airplane objects. You would initialize an object of this type like this:</p>
+<pre>airplane1 = Airplane(570, 0, “Boeing 747”)</pre>
+
+
+        
+            
+        <ul class="pager">
+            <li class="previous"><a href="PY-Modules.html"><span class="glyphicon glyphicon-menu-left"></span>Previous</a></li>
+        </ul>
+        </div>
+    </div>
+    </div>
+    
+    <footer>
+        <p>Colby Chance 2016</p>
+      </footer>
+    
+</body>
+</html>

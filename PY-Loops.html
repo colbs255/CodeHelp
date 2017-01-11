@@ -71,21 +71,54 @@
             </nav>
     </div>
         <div class="col-sm-10">
-        <h1 class="pageTitle">Hello World</h1>
-        <h3>Getting Started</h3>
-        <p>You are about to write your first program. If you are using a text editor, then click <b>File</b> > <b>New</b> (<kbd>cmd + N</kbd> on mac or <kbd>ctrl + N</kbd> on windows) then <b>File</b> > <b>Save</b> (<kbd>cmd + S</kbd> on mac or <kbd>ctrl + S</kbd> on windows) and name it <code>HelloWorld.py</code>. You can save the program anywhere you want, but remember where you save it.</p>
+        <h1 class="pageTitle">Loops</h1>
+        <p>In this section, you will start to get a better idea of the power of computing. As you probably know, computers can repeatedly do calculations or basic actions quickly, and you are about to learn how to make them do that. It is done through something called a “loop”. A loop essentially repeats a block of code until some kind of end condition is met. A basic case for a loop would be a factorial (Ex: 4 factorial = 4! = 4 x 3 x 2 x 1 = 24). You could put a number like 5 into the loop, and then the loop will subtract 1 from 5 to get 4 and multiply that by 5, then subtract 1 from 4 to get 3 and repeat. The main types of loops are “for loops” and “while loops”.</p>
 
-        <h3>Your First Program</h3>
-        <pre>print(“Hello World”)
-# prints hello world</pre>
-        <p>Just type that… and that’s your program. Python is cool. If you’re coming from a language like Java then this might seem like magic to you because it is much simpler to make a basic hello world program in Python. If you are using an IDE, then just press the run button (should look like a play button) and move on to the next section. If you are using a text editor, then running the program is a little more complicated because you need to use terminal or command prompt. On a mac, press <kbd>cmd + space</kbd> and type “ter” then select the terminal application. Now you have to navigate to the directory where your file is located. Find the folder that your file exists it then type <code>cd</code> on the terminal and drag the folder into your terminal. This should put the path to your file into your terminal and look something like this <code>cd ~/Users/username/Documents</code>. You have just told the terminal to navigate to the directory your class is in. Now type <code>python HelloWorld.py</code> and your program should run. If you are on Windows, go to the “command prompt” and then do the same thing but replace the <code>ls</code> command with <code>dir</code>. <b>Practice doing this!</b> You will be doing this every time you run your code if you’re using a text editor</p>
+        <h3>while loop</h3>
+        <p>A while loop has this general syntax:</p>
+        <pre>while testCondition:
+    #if test condition true, this code will run and then repeat
+</pre>
+	<p>A while loop is essentially an if statement that keeps repeating. The code tests if something is true, and if it is true then the code block will run, and then it will test the condition again. If the condition is true again then code will run again, if not then the program will move on. So in English: “While this condition is true, do this. If the condition is false, move on.” Here is an example with factorials.</p>
+<pre>factorialNum = 6
+answer = 1
+while factorialNum > 0:
+answer *= factorialNum
+factorialNum--
+print(“Answer: ” + answer)
+</pre>
+        <p>This code calculates “6!”. It starts out by checking if <code>factorialNum</code> is greater than 0, and since 6 is greater than 0, the code in the brackets runs. The program multiplies 1 by 6 then subtracts 1 from 6 to get 5 and then repeats, eventually forming the answer.</p>
             
-        <h3>What does this code mean?</h3>
-        <p>The code is using a function ( essentially method in Java) called print that takes in some sort of data and then prints it to the console. The data that you are printing in this case is called a string, which is essentially just normal text. Notice that there is a no semicolon or anything at the end of the statements, this is because Python actually uses lines to break up each line of code unlike Java that uses semicolons.</p>
+            
+        <h3>for loops</h3>
+        <p>A for loop is like a condensed version of a while loop. Here is the general syntax:</p>
+        <pre>for iteratingVar in object/sequence:
+    #do this code
+</pre>
+
+        <p>For loops are useful for iterating through compound data structures like lists, tuples, and dictionaries. Take a look at these examples:</p>
+        <pre>name = "Ron Swanson"
+for letter in name:
+    print(letter)
+</pre>
+
+        <p>During each iteration of the for loop, the loop essentially sets the iterating variable equal to each value of the set of data it is iterating. Strings can be iterated by a for loop. In this example, a for loop iterates through each character of the name string, causing each character of the string to be printed out one by one on each line. </p>
+        <pre>testScores = [92, 92, 88, 90, 88]
+mySum = 0
+for x in testScores:
+    mySum += x
+print(mySum / len(testScores))
+</pre>
+
+        <p>In this example, the for loop iterates through each grade in the tescScores list and adds each value to the mySum variable. The program then divides the new value of mySum by the length of the testScores array (number of elements in the list) to get the grade average.</p>
+        <p></p>
+        <p></p>
+
+            
             
         <ul class="pager">
-            <li class="previous"><a href="PY-HelloWorld.html"><span class="glyphicon glyphicon-menu-left"></span>Previous</a></li>
-            <li class="next"><a href="PY-Variables.html">Next<span class="glyphicon glyphicon-menu-right"></span></a></li>
+            <li class="previous"><a href="PY-CompoundData.html"><span class="glyphicon glyphicon-menu-left"></span>Previous</a></li>
+            <li class="next"><a href="PY-Functions.html">Next<span class="glyphicon glyphicon-menu-right"></span></a></li>
         </ul>
         </div>
     </div>

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Python</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="JS-navBar.js"></script>
+    <link rel="stylesheet" type="text/css" href="CSS-main.css">
+</head>
+<body>
+    <div class="jumbotron" id="jumbo">
+        <h1 class = "mainTitle" id="titleMain">Python</h1>
+    </div>
+    
+    <nav class="navbar navbar-inverse absBar" id="myBar">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myCollapseBar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+                <a class="navbar-brand" href="index.html">CodeHelp</a>
+          </div>
+          <div class="navbar-collapse collapse" id="myCollapseBar">
+            <ul class="nav navbar-nav">
+              <li><a href="JAVA-Intro.html">Java</a></li>
+              <li class="active"><a href="PYTHON-Intro.html">Python</a></li>
+              <li><a href="WEBDESIGN-Intro.html">HTML/CSS/JS</a></li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+      </nav>
+    
+    <div class="placeHolder"></div>
+
+    
+    <div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-2" id="mySideBar">
+            <nav class="navbar navbar-default" roll="navigation">
+                <div class="container-fluid" id="sideNavPadFixed">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle navbar-default" data-toggle="collapse" data-target="#mySideCollapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" id="sideBarTitle">Python Lessons</a>
+                </div>
+                <div class="nav-pills brand-pills nav-stacked collapse navbar-collapse" id="mySideCollapse">
+                    <ul class="nav">
+                    <li class="active"><a href="JAVA-Intro.html">Introduction to Pyhthon</a></li>
+                    <li><a href="PY-HelloWorld.html">Hello World</a></li>
+                    <li><a href="PY-Variables.html">Variables</a></li>
+                    <li><a href="PY-PrintInput.html">Print/Input</a></li>
+                    <li><a href="PY-MathFunctions.html">Math Functions</a></li>
+                    <li><a href="PY-ControlStatements.html">Control Statements</a></li>
+                    <li><a href="PY-CompoundData.html">Compound Data Types</a></li>
+                    <li><a href="PY-Loops.html">Loops</a></li>
+                    <li><a href="PY-Functions.html">Functions</a></li>
+                    <li><a href="PY-Modules.html">Modules</a></li>
+                    <li><a href="PY-ClassesObjects.html">Classes and Objects</a></li>
+                    </ul>
+                </div>
+                </div>
+            </nav>
+    </div>
+        <div class="col-sm-10">
+        <h1 class="pageTitle">Functions</h1>
+        <p>A function is a block of code that is given a name and can be called wherever you want in a program (methods in java). They are useful when you need to do the same thing repeatedly within your code. You have actually been using built in functions within Python already. <code>print()</code>, <code>pow()</code>, <code>len()</code>, <code>input()</code>, and all of your other math functions are functions.</p>
+
+        <h3>Calling Functions</h3>
+        <p>When you call a function, you type its name followed by parenthesis with all of the parameters that it needs within in the parentheses separated by commas. The <code>pow()</code> function requires two parameters: the base and the exponent. Whenever a function is called, control is handed over to the function, and then returned to the rest of the program when the function ends.</p>
+            
+        <h3>Calling Functions</h3>
+        <p>When you call a function, you type its name followed by parenthesis with all of the parameters that it needs within in the parentheses separated by commas. The <code>pow()</code> function requires two parameters: the base and the exponent. Whenever a function is called, control is handed over to the function, and then returned to the rest of the program when the function ends.</p>
+            
+        <h3>Creating Functions</h3>
+        <p>When creating a function, you must consider what values the function will take in, what it will do with those values, and what value it will return. Here’s the syntax of a basic function:</p>
+    <pre>def functionName(parameters):
+    #function code body
+    return varOrExpression
+</pre>
+        <p>Functions always start with the keyword <code>def</code> followed by the function name with the parameters in parentheses. The parameters are the values that you pass into the function to use in the method body, and the return statement specifies the value that the function will give back to the user. The round function for example takes in any kind of number, performs some operations in the body, and then returns the rounded version of the number. Here’s an example of a function that converts degrees Celsius to degrees Fahrenheit.</p>
+        <pre>def toFahrenheit(celsius):
+    return celsius * 1.8 + 32
+</pre>
+        <p>This was pretty simple right? Just use the keyword “def”, name the method “toFahrenheit” take in a variable called Celsius and return an expression that converts degrees Celsius to degrees Fahrenheit.</p>
+        <h3>Local Variables</h3>
+        <p>Variables and parameters in functions are called <b>local variables</b>, meaning they are local to the method, and belong to the method, not the rest of the python file. They are recreated each time the function is called and deleted each time the function ends. You create local variables by initializing the variables inside of method definition.</p>
+            
+        <h3>Global Variables</h3>
+	   <p>Global variables are variables that can be called from anywhere within the python file, so they can be called within a method or outside of a method. You create global variables by initializing them outside of the function. Here is an example that shows local and global variables.</p>
+<pre>cityTempC = 30 # this is a global variable
+def toFahrenheit(celsius):
+    # celsius here is local variable
+    fahrenheit = celsius * 1.8 + 32 #fahrenheit is also a local variable since it was created in a method
+    return fahrenheit
+print(toFahrenheit(cityTempC))
+</pre>
+
+        <h3>Exercises</h3>
+        <p>Make a method called printUser that takes in 2 strings: firstName and lastName, and an int called age. Return one string that has the form “[firstName] [lastName] is [age] years old.”</p>
+            
+        <h3>Answer</h3>
+        <pre>def printUser(firstName, lastName, age):
+    return (firstName + “ ” + lastName “ is ” + age “ years old.”		
+</pre>
+            
+            
+        <ul class="pager">
+            <li class="previous"><a href="PY-Loops.html"><span class="glyphicon glyphicon-menu-left"></span>Previous</a></li>
+            <li class="next"><a href="PY-Modules.html">Next<span class="glyphicon glyphicon-menu-right"></span></a></li>
+        </ul>
+        </div>
+    </div>
+    </div>
+    
+    <footer>
+        <p>Colby Chance 2016</p>
+      </footer>
+    
+</body>
+</html>
