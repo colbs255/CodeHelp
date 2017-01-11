@@ -110,5 +110,15 @@ footer > p {
     padding-left: 15px;
     padding-right: 15px;
 }
+
+.normalTable {
+    border: 1px solid black;
+    width: 100%;
+}
+
+.normalTable th {
+    border-bottom: 1px solid black;
+    background-color: gold;
+}
     
 
