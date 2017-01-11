@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Python</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="JS-navBar.js"></script>
+    <link rel="stylesheet" type="text/css" href="CSS-main.css">
+</head>
+<body>
+    <div class="jumbotron" id="jumbo">
+        <h1 class = "mainTitle" id="titleMain">Python</h1>
+    </div>
+    
+    <nav class="navbar navbar-inverse absBar" id="myBar">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myCollapseBar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+                <a class="navbar-brand" href="index.html">CodeHelp</a>
+          </div>
+          <div class="navbar-collapse collapse" id="myCollapseBar">
+            <ul class="nav navbar-nav">
+              <li><a href="JAVA-Intro.html">Java</a></li>
+              <li class="active"><a href="PYTHON-Intro.html">Python</a></li>
+              <li><a href="WEBDESIGN-Intro.html">HTML/CSS/JS</a></li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+      </nav>
+    
+    <div class="placeHolder"></div>
+
+    
+    <div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-2" id="mySideBar">
+            <nav class="navbar navbar-default" roll="navigation">
+                <div class="container-fluid" id="sideNavPadFixed">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle navbar-default" data-toggle="collapse" data-target="#mySideCollapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" id="sideBarTitle">Python Lessons</a>
+                </div>
+                <div class="nav-pills brand-pills nav-stacked collapse navbar-collapse" id="mySideCollapse">
+                    <ul class="nav">
+                    <li class="active"><a href="JAVA-Intro.html">Introduction to Pyhthon</a></li>
+                    <li><a href="PY-HelloWorld.html">Hello World</a></li>
+                    <li><a href="PY-Variables.html">Variables</a></li>
+                    <li><a href="PY-PrintInput.html">Print/Input</a></li>
+                    <li><a href="PY-MathFunctions.html">Math Functions</a></li>
+                    <li><a href="PY-ControlStatements.html">Control Statements</a></li>
+                    <li><a href="PY-CompoundData.html">Compound Data Structures</a></li>
+                    <li><a href="PY-Loops.html">Loops</a></li>
+                    <li><a href="PY-Functions.html">Functions</a></li>
+                    <li><a href="PY-Modules.html">Modules</a></li>
+                    <li><a href="PY-CLassesObjects.html">CLasses and Objects</a></li>
+                    </ul>
+                </div>
+                </div>
+            </nav>
+    </div>
+        <div class="col-sm-10">
+        <h1 class="pageTitle">Variables</h1>
+        <h3>What is a variable?</h3>
+        <p>You essentially store all information in variables. You can store a number, name, age, color, or just about anything in a variable. Understanding variables is very important for programming in general.</p>
+
+        <h3>Types of Variables</h3>
+        <p>The basic data types in Python are Numbers, Strings, and Booleans. There are several types of numbers including a integer, float, and long, but the main ones you would use are the float and integer. There are also compound data types that just hold a series of these basic data types which you will learn soon.</p>
+            
+        <h3>Variables Syntax</h3>
+        <p>Declaring variables in Python generally has this syntax <code>variableName = variableValue</code>. Whenever you want to create a new variable, you just give it a name and assign a value to it. Python is different from many languages because it does not require the programmer to declare the type of variable like in Java or C++. This means that the Python interpreter actually infers the type of variable based on the data you assign to it. After instantiating a variable, you can later <b>assign</b> it a new value by typing <code>variableName = newValue</code>. These concepts apply to all types of values, so make sure you learn them. Here are some examples. Here are some examples</p>
+        <ul>
+		<li><code>duncancsAge = 18</code></li>
+		<li><code>battingAverage = .192</code></li>
+		<li><code>name = “Andy”</code></li>
+		<li><code>ronIsBest = True</code></li>
+	</ul>
+
+        <p>Also, remember that variable names <b>are case sensitive</b>. So <code>duncansAge</code> is <b>not</b> the same as <code>DuncansAge</code>.</p>
+            
+        <h3>int</h3>
+        <p>You can probably infer that int is short for integer which is just a whole number (i.e. -1, 0, 1, 2, etc..). They are good for representing simple whole numbers. If you try to divide an int by an int, the answer will be truncated. For example, if you do <code>int jimsAge = 9/4;</code>, jimsAge will be set to <b>2</b> not 2.25! If you want to get 2.25 then use float which we will talk about next. Try to be mindful of this when programming.</p>
+        <h3>float</h3>
+        <p>A “float” is like an int, but it can contain a decimal and can hold very large numbers. If you are dealing with numbers that can have a chance of not being whole, you should use a float. Float values will not truncate numbers like ints. For example, if you do <code> jimsAge = 9/4</code>, jimsAge will be set to <b>2.25</b> not 2. Unlike languages such as Java, Python automatically infers the type of variable you are using. If a float is ever used in your expression, then the whole result will be a float (Python casts to the most precise data type to prevent loss of precision). Therefore, 5 / 2 will return 2, but 5 / 2.0 will return 2.5. In practice, you mostly won’t have to worry about the distinction between floats and ints because Python will infer the type you want for you.</p>
+        <h3>boolean</h3>
+        <p>A “boolean” can either be set to <code>True</code> or <code>False</code>, nothing else. Boolean variables are often used to make code more readable. For example, you can type <code>hasGlasses = True</code>. Later on we will discuss “if statements” which will do something only if a condition is True, and Booleans are often used in these if statements. You can also set Booleans equal to expressions like this <code>isGreater = (x > 5)</code>. This statement will set the boolean variable to True if x is greater than 5. If it is not greater, then the variable will be set to False.</p>
+        <p>Also, notice that <code>True</code> and <code>False</code> do not use quotation marks (because that would make the data type a string) and they are capitalized. </p>
+        <h3>string</h3>
+        <p>A string can be used to represent a word, a phrase, a sentence, or even a paragraph, and is denoted with quotation marks. So <code>“11”</code>, <code>“bird”</code>, <code>“False”</code> are all strings but 11, 23, and False are not strings. This is a simple but important distinction that you should know in programming.</p>
+            
+        <h3>What can you do with variables?</h3>
+        <p>You can do a lot with primitive variables, including adding, subtracting, multiplying, or dividing. Take a look at this example</p>
+        <pre>radius = 4
+pi = 3.1415
+circleArea = pi * radius * radius
+print(“Circle area: ” +  circleArea)
+	
+x = (5/2) + 1
+print(x)
+</pre>
+        <p>In the first section an int variable called <code>radius</code> was initialized and equal to 4. Then a float called pi was initialized (float because it is a decimal). <code>circleArea</code> is interesting because it was set equal to a mathematical expression. <code>circleArea</code> in this case is a float as well because a float was used in the mathematical expression.</p>
+        <p>In the next section, an int variable called <code>x</code> was created. You might think that the expression would divide 5 by 2 to get 2.5 and then add 1 to get 3.5, setting <code>x</code> equal to 3.5. It will not do this though because the 2 and the 5 in the expression are ints (put a .0 at the end to make them floats). The code will essentially truncate (or cut off the decimal) 5/2 to 2 and then add 1 to get 3. This is often called “integer division".</p>
+        <p>Lastly, notice how a <code>+</code> was used inside of the println statement. The <code>+</code> essentially says take the string and add something else to the end of it to make a new string.</p>
+        <h3>Exercises: What will these code samples print?</h3>
+        <pre>name = “Jim”
+age = (45 / 8) + 2
+print(“I know ” + name + “. He is ” + age)
+</pre>
+
+<pre>y = 2.0
+print(y + 3.4 * 2)
+</pre>
+            
+        <p>Answer 1: I know Jim. He is 7</p>
+        <p>Answer 2: 8.8 (Python uses the same order of operations you learned in school)</p>
+
+        
+            
+        <ul class="pager">
+            <li class="previous"><a href="PY-HelloWorld.html"><span class="glyphicon glyphicon-menu-left"></span>Previous</a></li>
+            <li class="next"><a href="PY-PrintInput.html">Next<span class="glyphicon glyphicon-menu-right"></span></a></li>
+        </ul>
+        </div>
+    </div>
+    </div>
+    
+    <footer>
+        <p>Colby Chance 2016</p>
+      </footer>
+    
+</body>
+</html>

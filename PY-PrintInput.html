@@ -69,20 +69,36 @@
                 </div>
                 </div>
             </nav>
+
     </div>
         <div class="col-sm-10">
-        <h1 class="pageTitle">Introduction to Python</h1>
-    
-        <p>Python is different from languages like Java or C++ because it uses an interpreter rather than a compiler to run. This means that you can run Python code as soon as you create it rather than compiling it first because the interpreter essentially reads through your code line by line. Another nice thing is that Python does not require code to be in a class or method to run, this makes it much easier for beginners to start programming and can make creating simple programs much faster.</p>
+        <h1 class="pageTitle">Print and Input</h1>
+        <h3>Fun Stuff</h3>
+        <p>Now that you know about variables, you can learn how to design useful programs for actual users. To do this, you would have to save the input of a user. For example, if you wanted to calculate the surface area of a sphere, you would have to ask the user for the radius of the sphere and then perform the necessary calculations.</p>
 
-        <h3>What you need</h3>
-    
-        <p>Many operating systems now have Python installed by default. If you’re on a mac and want to check if you have Python installed then press <kbd>cmd + space</kbd> and type “ter” then select the terminal application. Then type <code>python</code> into the terminal and press enter. To do this on Windows go to “command prompt” and type Python. If you see something like “Python 2.7.10” then you have Python, if not then it is easy to install from <a href=https://www.python.org>Python’s website</a>. You should also get a text editor or an Integrated Development Environment (IDE) to actually write the code. Text editors are very light-weight, fast, and versatile. An IDE is basically a high powered text editor that can compile and run the program for you, and they will automatically find errors in your code and suggest how to fix them. You decide what is best for you, a text editor will require you to figure out every mistake for yourself and you will probably understand the language faster, but it will be more frustrating and not as efficient for writing code in general. Many college professors only allow text editors when you are learning how to program because they require you to find your own errors and understand what you are doing. I would recommend starting with a text editor and then moving on to an IDE when you are more comfortable with the language. The best text editors are Sublime and Atom (do not just use Notepad on windows or textEdit on mac, they are not optimized for programming) and the best Java IDEs are Eclipse and IntelliJ (I prefer IntelliJ). You can google one of these and you will find the downloads page with instructions.</p>
+        <h3>Getting Input</h3>
         
+        <p>Getting input from the user is fairly easy in python the syntax looks like this <code>varName = input(“Message Text”)</code>. Essentially, the program will call the input method which will print your message to the user and wait for the user to enter a value (type the value and press enter) for your variable which the method will set equal to your variable. After getting the value, just perform the calculation for the surface area and print out your answer to the user.</p>
+        <pre>pi = 3.14159265
+radius = input(“Enter the radius: ”)
+surfaceArea = 4 * pi * radius * radius
+print(“Surface area: ” + surfaceArea)
+</pre>
+            
+        <h3>Casting</h3>
+        <p>The input method automatically treats the input data as a string, but if you want the program to check that what the user entered is a int or float, you must cast it. The syntax for casting looks like this <code>varType(input(“message”))</code>. This will make the compiler check if the user entered a value that falls under the desired type and will throw an error if it does not. Here are some examples</p>
+        <pre>usersAge = int(input(“Enter age:  ”))
+usersName = input(“Enter Name: ”)
+usersWeight = float(input(“Enter weight: ”))
+</pre>
+            
+            <h3>Practice</h3>
+            <p>Practice using your newfound input and output knowledge by making programs. You could make a program that finds the average of some values, finds the midpoint of 2 lines, automates the Pythagorean theorem or whatever you want.</p>
             
         <ul class="pager">
-            <li class="next"><a href="PY-HelloWorld.html">Next<span class="glyphicon glyphicon-menu-right"></span></a></li>
-        </ul>    
+            <li class="previous"><a href="PY-Variables.html"><span class="glyphicon glyphicon-menu-left"></span>Previous</a></li>
+            <li class="next"><a href="PY-MathFunctions.html">Next<span class="glyphicon glyphicon-menu-right"></span></a></li>
+        </ul>
         </div>
     </div>
     </div>

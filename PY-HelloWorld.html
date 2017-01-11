@@ -71,18 +71,22 @@
             </nav>
     </div>
         <div class="col-sm-10">
-        <h1 class="pageTitle">Introduction to Python</h1>
-    
-        <p>Python is different from languages like Java or C++ because it uses an interpreter rather than a compiler to run. This means that you can run Python code as soon as you create it rather than compiling it first because the interpreter essentially reads through your code line by line. Another nice thing is that Python does not require code to be in a class or method to run, this makes it much easier for beginners to start programming and can make creating simple programs much faster.</p>
+        <h1 class="pageTitle">Hello World</h1>
+        <h3>Getting Started</h3>
+        <p>You are about to write your first program. If you are using a text editor, then click <b>File</b> > <b>New</b> (<kbd>cmd + N</kbd> on mac or <kbd>ctrl + N</kbd> on windows) then <b>File</b> > <b>Save</b> (<kbd>cmd + S</kbd> on mac or <kbd>ctrl + S</kbd> on windows) and name it <code>HelloWorld.py</code>. You can save the program anywhere you want, but remember where you save it.</p>
 
-        <h3>What you need</h3>
-    
-        <p>Many operating systems now have Python installed by default. If you’re on a mac and want to check if you have Python installed then press <kbd>cmd + space</kbd> and type “ter” then select the terminal application. Then type <code>python</code> into the terminal and press enter. To do this on Windows go to “command prompt” and type Python. If you see something like “Python 2.7.10” then you have Python, if not then it is easy to install from <a href=https://www.python.org>Python’s website</a>. You should also get a text editor or an Integrated Development Environment (IDE) to actually write the code. Text editors are very light-weight, fast, and versatile. An IDE is basically a high powered text editor that can compile and run the program for you, and they will automatically find errors in your code and suggest how to fix them. You decide what is best for you, a text editor will require you to figure out every mistake for yourself and you will probably understand the language faster, but it will be more frustrating and not as efficient for writing code in general. Many college professors only allow text editors when you are learning how to program because they require you to find your own errors and understand what you are doing. I would recommend starting with a text editor and then moving on to an IDE when you are more comfortable with the language. The best text editors are Sublime and Atom (do not just use Notepad on windows or textEdit on mac, they are not optimized for programming) and the best Java IDEs are Eclipse and IntelliJ (I prefer IntelliJ). You can google one of these and you will find the downloads page with instructions.</p>
-        
+        <h3>Your First Program</h3>
+        <pre>print(“Hello World”)
+# prints hello world</pre>
+        <p>Just type that… and that’s your program. Python is cool. If you’re coming from a language like Java then this might seem like magic to you because it is much simpler to make a basic hello world program in Python. If you are using an IDE, then just press the run button (should look like a play button) and move on to the next section. If you are using a text editor, then running the program is a little more complicated because you need to use terminal or command prompt. On a mac, press <kbd>cmd + space</kbd> and type “ter” then select the terminal application. Now you have to navigate to the directory where your file is located. Find the folder that your file exists it then type <code>cd</code> on the terminal and drag the folder into your terminal. This should put the path to your file into your terminal and look something like this <code>cd ~/Users/username/Documents</code>. You have just told the terminal to navigate to the directory your class is in. Now type <code>python HelloWorld.py</code> and your program should run. If you are on Windows, go to the “command prompt” and then do the same thing but replace the <code>ls</code> command with <code>dir</code>. <b>Practice doing this!</b> You will be doing this every time you run your code if you’re using a text editor</p>
+            
+        <h3>What does this code mean?</h3>
+        <p>The code is using a function ( essentially method in Java) called print that takes in some sort of data and then prints it to the console. The data that you are printing in this case is called a string, which is essentially just normal text. Notice that there is a no semicolon or anything at the end of the statements, this is because Python actually uses lines to break up each line of code unlike Java that uses semicolons.</p>
             
         <ul class="pager">
-            <li class="next"><a href="PY-HelloWorld.html">Next<span class="glyphicon glyphicon-menu-right"></span></a></li>
-        </ul>    
+            <li class="previous"><a href="PY-HelloWorld.html"><span class="glyphicon glyphicon-menu-left"></span>Previous</a></li>
+            <li class="next"><a href="PY-Variables.html">Next<span class="glyphicon glyphicon-menu-right"></span></a></li>
+        </ul>
         </div>
     </div>
     </div>
