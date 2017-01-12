@@ -121,5 +121,17 @@ footer > p {
     background-color: gold;
     
 }
+
+.normalTable tr td {
+    padding-left: 3px;
+    padding-right:3px;
+/*    border: 1px solid black;*/
+/*
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+*/
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+}
     
 
