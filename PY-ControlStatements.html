@@ -78,14 +78,14 @@
         <p>The if statement works the way you would expect. It says if this condition is true, then do this. Here’s what an if statement generally looks like.</p>
         <pre>x = 5
 if x >= 5: 
-    print(“x is greater than or equal to 5”)
+    print("x is greater than or equal to 5")
 </pre>    
-        <p>The computer looks inside of the parentheses and evaluates if x is greater than or equal to 5. Since x is equal to 5, the program will print “X is greater than or equal to 5”.<b> Everything in your if clause must be indented one more level than the the actual if statement.</b> This is very important, and is pretty unique to Python because many languages do not look at indentation. The indentation tells the interpreter that these lines are what you want executed if the expression is True. This takes place of the curly brackets that you see in many other languages, and you will see this same rule used later in other aspects of Python.</p>
+        <p>The computer looks inside of the parentheses and evaluates if x is greater than or equal to 5. Since x is equal to 5, the program will print "X is greater than or equal to 5”.<b> Everything in your if clause must be indented one more level than the the actual if statement.</b> This is very important, and is pretty unique to Python because many languages do not look at indentation. The indentation tells the interpreter that these lines are what you want executed if the expression is True. This takes place of the curly brackets that you see in many other languages, and you will see this same rule used later in other aspects of Python.</p>
             
         <p>The if statement also works great with Booleans. Here’s an example</p>
         <pre>hasGlasses = False
 if hasGlasses:
-    print(“Maggie has glasses”)
+    print("Maggie has glasses")
 </pre>
 
         <p>The statement will evaluate if the boolean hasGlasses is set to true. Since the statement is set to false, the code inside the curly brackets will not do anything.</p>
@@ -94,9 +94,9 @@ if hasGlasses:
         <p>In the case that your test condition is not true, you can use an else statement to do something “else”. For example,</p>
         <pre>x = 5
 if x == 4:
-    print(“x is equal to 4”)
+    print("x is equal to 4")
 else:
-    print(“Not sure what x is… but it is not 4”)
+    print("Not sure what x is… but it is not 4")
 </pre>
             
         <p>The == operator tests if 2 variables are equal. Whenever you want to see if something is equal, use ==. <b>DO NOT USE =</b>. The = is the assignment operator. It is only used to set something equal to something else. This program checks if x is equal to 4. Since it does not equal 4, it will run the code in the else statement.</p>
@@ -106,13 +106,13 @@ else:
             
         <pre>age = 19
 if age &lt= 3:
-    print(“You are a toddler”)
+    print("You are a toddler")
 elif age &lt= 12:
-    print(“You are a kid”)
+    print("You are a kid")
 elif age &lt= 17:
-    print(“You are a teen”)
+    print("You are a teen")
 else:
-    print(“You are an adult”)
+    print("You are an adult")
 </pre>
         <p>The code will start with the if statement and if true, then it will run the code inside the first if statement clause. If it is not true, then it will move on to the next condition and will repeat this process until it either reaches a condition that is true or it reaches the else statement. In this case, the code in the else statement will execute since 19 does not satisfy any of the conditions.</p>
             
@@ -127,13 +127,13 @@ else:
 hasSuperStrength = True
 if canFly:
     if hasSuperStrength:
-        print(“You are superman”)
+        print("You are superman")
 </pre>
         <p>While this code is valid, it is not very easy to read and there is a simpler way. Take a look at this:</p>
         <pre>canFly = True
 hasSuperStrength = True
 if canFly and hasSuperStrength:
-    print(“You are superman”)
+    print("You are superman")
 </pre>
         <p>This is easier to read, easier to write, easier for the machine to run, and essentially equivalent to what was coded above. The <code>and</code> is the “and” operator, so if we translate this code to English, it would be like: “If canFly is True and if and only if hasSuperStrength is also True, then print "You are superman." Remember that the block of code will only be called if both of these conditions are True. If one of them is False, then the following code will be skipped.</p>
             
@@ -142,16 +142,16 @@ if canFly and hasSuperStrength:
         <pre>canFly = True
 hasSuperStrength = True
 if canFly:
-    print(“You have super powers”)
+    print("You have super powers")
 if hasSuperStrength:
-    print(“You have super powers”)
+    print("You have super powers")
 </pre>
         <p>This code is alright, but if both of the expressions are true then the same statement will be printed twice. Here is another trick</p>
             
         <pre>canFly = True
 hasSuperStrength = True
 if canFly or hasSuperStrength:
-    print(“You have super powers”)
+    print("You have super powers")
 </pre>
         <p>Once again, this is simpler and better. The <code>or</code> is the or operator, so in English this code says “If canFly is True or if hasSuperStrength is True, then you have super powers.” It will also print the statement at most one time, so there is no redundancy.</p>
             
@@ -162,13 +162,13 @@ if canFly or hasSuperStrength:
             
         <h3>Answer</h3>
         <pre>if has4Sides and allSidesEqualLength and allCorners90Degrees:
-        print(“Square”)
+        print("Square")
 elif has4Sides and allCorners90Degrees:
-    print(“Rectangle”)
+    print("Rectangle")
 elif has4Sides:
-    print(“Quadrillateral”)
+    print("Quadrillateral")
 else:
-    print(“Not a quadrilateral”)</pre>
+    print("Not a quadrilateral")</pre>
             
         <p>There are many ways to do this, but this is one of the simplest ways. Notice how the code tests for the most specific case first, and then tests for more general cases as it goes down; you generally want to use this strategy for efficient code.</p>
             

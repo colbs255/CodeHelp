@@ -152,7 +152,7 @@
 }
 </pre>
             
-            <p>In your DogArea class, you can now make a new Dog object and set its values with just one line like this <code>Dog buddy = new Dog(“Buddy”, “Golden Retriever”, 0);</code>. This way the user of your class or you won’t have to call the set methods later. The variables that you pass into the constructor are separated by commas and do need to be in order. If you don’t pass them in order then the compiler will see this and give you an error. Also, the constructor will give a quick print out letting the user know a dog was created.</p>
+            <p>In your DogArea class, you can now make a new Dog object and set its values with just one line like this <code>Dog buddy = new Dog("Buddy", "Golden Retriever", 0);</code>. This way the user of your class or you won’t have to call the set methods later. The variables that you pass into the constructor are separated by commas and do need to be in order. If you don’t pass them in order then the compiler will see this and give you an error. Also, the constructor will give a quick print out letting the user know a dog was created.</p>
             
             <h3>Field Variables</h3>
             <p>If the values of a variable are not private, you can access the variables of an object directly by typing <code>objectName.variableName</code>. This is not recommended though because you should make your variables private so the user can’t do something illogical with the variable like set the value of a dogs age to a negative number.</p>
@@ -253,7 +253,7 @@
             
         <h3>toString method</h3>
         <p>Have you ever tried to print out an object like this <code>System.out.println(ObjectName)</code>? If you have then you most likely got a weird sequence of characters that looks something like this User@18fd984. This is because the console is printing out the memory address of the object. The memory address just tells you where the object is stored in the system essentially. What if you wanted your own custom message to be printed when you printed an object? This is possible with the toString() method.</p>
-        <p>The toString method has a general form like this <code>public String toString() {return “Your String”;} </code>. So if you try to print out the object itself, then this message will be called automatically. It is a special feature within Java.</p>
+        <p>The toString method has a general form like this <code>public String toString() {return "Your String";} </code>. So if you try to print out the object itself, then this message will be called automatically. It is a special feature within Java.</p>
             
         <h3>Exercise</h3>
         <p>This will be a larger exercise than normal, but it will be good practice for what you have learned so far. Your mission, should you choose to accept it, is to make a class called Movie that has a String for the title, a String for the director, and an int for the year. You should make a constructor that sets all of these values, and get methods for all of them as well. Then make a Test class that creates some movies (any movies you want), and prints out the name and year of each movie. Try to do this with as little code as possible. (Hint: you might want to make a method that prints the info of the movie for you)</p>
