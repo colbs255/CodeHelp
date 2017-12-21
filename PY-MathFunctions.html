@@ -134,14 +134,12 @@
             </table>
             
         <h3>Assignment Shortcuts</h3>
-        <p>You will often change the value of variables while programming. Let’s say you just wanted to add the number 1 to your variable. One way is like this <code>varName = VarName + 1</code>. This is valid in Python because it evaluates the expression before assigning it to the variable. This code gets the value of the variable, adds 1 to the variable, and then assigns the variable that new value. A shortcut that you will see often in Python to doing this is <code>varName++;</code>. This is a shortcut that will add 1 to your variable. It is 100% equivalent to <code>varName = VarName + 1</code>. It is just a nice feature that the creators of Python added.</p>
-        <p>Let’s say you wanted to add a number that isn’t necessarily 1 to your variable. There is a shortcut for that also that looks like this <code>varName += 2</code>, you can use this for whatever number you want.</p>
-            
-        <p>Let’s say you wanted to add a number that isn’t necessarily 1 to your variable. There is a shortcut for that also that looks like this <code>varName += 2</code>, you can use this for whatever number you want.</p>
+        <p>You will often change the value of variables while programming. Let’s say you just wanted to add the number 1 to your variable. One way is like this <code>varName = VarName + 1</code>. This is valid in Python because it evaluates the expression before assigning it to the variable. This code gets the value of the variable, adds 1 to the variable, and then assigns the variable that new value. A shortcut that you will see often in Python to doing this is <code>varName += 1</code>. This is a shortcut that will add 1 to your variable. It is 100% equivalent to <code>varName = VarName + 1</code>.</p>
+        <p>If you wanted to add another number like 2, you could do <code>varName += 2</code>.</p>
         
         <p>There is also a shortcut for multiplication that looks like this <code>varName *= anyNumber</code>. This will multiply your variable by the number you enter and set it equal to that new value in the process.</p>
             
-        <p>One more thing to note is that <code>++varName</code> and <code>varName++</code> are actually both valid actions in Python, but they work differently (this distinction is commonly tested in college CS courses and interviews). The distinction can be seen when you pass them into the print method. Let’s say you have an int called myNumber that equals 4. If you typed <code>print(myNumber++)</code>, what will be printed out? 4 or 5 because the code is adding 1 to myNumber? This code will print 4, because myNumber++ will return the myNumber value before adding 1 to it. What if you typed <code>print(++myNumber)</code>?  This would print 5, because ++myNumber will add 1 to the variable and then return it. So make sure you know the difference between these 2 forms and know when you should use them.</p>
+        <p>One more thing to note is that <code>++varName</code> and <code>varName++</code> actually are not used in python 3, so you must do <code>varName += 1</code> instead. If you are new to programming then this probably will not matter to you.</p>
             
             
         <ul class="pager">

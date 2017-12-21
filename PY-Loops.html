@@ -80,19 +80,19 @@
     #if test condition true, this code will run and then repeat
 </pre>
 	<p>A while loop is essentially an if statement that keeps repeating. The code tests if something is true, and if it is true then the code block will run, and then it will test the condition again. If the condition is true again then code will run again, if not then the program will move on. So in English: “While this condition is true, do this. If the condition is false, move on.” Here is an example with factorials.</p>
-<pre>factorialNum = 6
+<pre>
+factorialNum = 6
 answer = 1
 while factorialNum > 0:
-answer *= factorialNum
-factorialNum--
-print(“Answer: ” + answer)
-</pre>
+    answer *= factorialNum
+    factorialNum -= 1
+print("Answer:", answer)</pre>
         <p>This code calculates “6!”. It starts out by checking if <code>factorialNum</code> is greater than 0, and since 6 is greater than 0, the code in the brackets runs. The program multiplies 1 by 6 then subtracts 1 from 6 to get 5 and then repeats, eventually forming the answer.</p>
             
             
         <h3>for loops</h3>
         <p>A for loop is like a condensed version of a while loop. Here is the general syntax:</p>
-        <pre>for iteratingVar in object/sequence:
+        <pre>for iteratingVar in sequence:
     #do this code
 </pre>
 

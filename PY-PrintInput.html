@@ -74,24 +74,24 @@
         <div class="col-sm-10">
         <h1 class="pageTitle">Print and Input</h1>
         <h3>Fun Stuff</h3>
-        <p>Now that you know about variables, you can learn how to design useful programs for actual users. To do this, you would have to save the input of a user. For example, if you wanted to calculate the surface area of a sphere, you would have to ask the user for the radius of the sphere and then perform the necessary calculations.</p>
+        <p>Now that you know about variables, you can learn how to design useful programs for actual users. To do this, you would have to save the input of a user.</p>
 
         <h3>Getting Input</h3>
         
-        <p>Getting input from the user is fairly easy in python the syntax looks like this <code>varName = input(“Message Text”)</code>. Essentially, the program will call the input method which will print your message to the user and wait for the user to enter a value (type the value and press enter) for your variable which the method will set equal to your variable. After getting the value, just perform the calculation for the surface area and print out your answer to the user.</p>
-        <pre>pi = 3.14159265
-radius = input(“Enter the radius: ”)
-surfaceArea = 4 * pi * radius * radius
-print(“Surface area: ” + surfaceArea)
-</pre>
+        <p>Getting input from the user is fairly easy in python the syntax looks like this <code>varName = input(“Message Text”)</code>. Essentially, the program will call the input method which will print your message to the user and wait for the user to enter a value (type the value and press enter) for your variable. Once the user has entered a value, it will save that value.</p>
+        <pre>name = input("What is your name? ");
+print("Hello " + name);
+        </pre>
+            
+        <p>Notice how in this example a <code>+</code> operator was used rather than <code>,</code>. The <code>+</code> is used for concatenating strings together and then printing the concatenated string. For these kind of print statements, you should only use the <code>+</code> operator for concatenating strings. You can use whichever operator you'd like as long as you know the differences. </p>
             
         <h3>Casting</h3>
-        <p>The input method automatically treats the input data as a string, but if you want the program to check that what the user entered is a int or float, you must cast it. The syntax for casting looks like this <code>varType(input(“message”))</code>. This will make the compiler check if the user entered a value that falls under the desired type and will throw an error if it does not. Here are some examples</p>
-        <pre>usersAge = int(input(“Enter age:  ”))
-usersName = input(“Enter Name: ”)
-usersWeight = float(input(“Enter weight: ”))
-</pre>
-            
+        <p>The input method automatically treats the input data as a string, but if you want to take in a numerical value then you need to cast it. Casting essentially forces the compiler to treat the variable as whatever type you cast it to. The general form for casting input looks like this <code>varType(input("message"))</code>. In this example, the program will ask for the radius of a circle and ouput the corresponding area.</p>
+        <pre>pi = 3.14159265
+radius = float(input("Enter the radius: "))
+surfaceArea = pi * radius * radius
+print("Area:", surfaceArea)
+        </pre>     
             <h3>Practice</h3>
             <p>Practice using your newfound input and output knowledge by making programs. You could make a program that finds the average of some values, finds the midpoint of 2 lines, automates the Pythagorean theorem or whatever you want.</p>
             

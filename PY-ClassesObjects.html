@@ -89,16 +89,17 @@
 <pre>class Airplane:
     topSpeed = 200
     currentSpeed = 0
-    name = “Spruce Goose”
+    name = "Spruce Goose"
+    
+    def takeOff(self):
+        print("We are taking off now")
+    def changeSpeed(self, speedChange):
+        self.currentSpeed += speedChange
+        if self.currentSpeed > self.topSpeed:
+            self.currentSpeed = self.topSpeed
+    def land(self):
+        print("We are landing")
 
-    def takeOff():
-        print(“We are taking off now”)
-    def changeSpeed(speedChange):
-        currentSpeed += speedChange
-        if currentSpeed > topSpeed:
-            currentSpeed = topSpeed
-    def land():
-        print(“We are landing”)	
 </pre>
         <h3>Instantiating Classes and using Objects</h3>
         <p>Instantiating a class or creating an object looks like this:</p>
@@ -110,14 +111,40 @@
 <pre>def __init__(self, paramaters):
     #constructor body
 </pre>
-	<p>The self is a variable for the object itself. Many languages pass this in automatically, but Python does not, so remember to make self as one of your parameters each time you create a constructor. Also, keep in mind that there are two underscores on each side of the init keyword not one. A constructor for the airplane class would look like this:</p>
+	<p>The self is a variable for the object itself. Whenever you make a function inside a class, self should be the first parameter. Python automatically passes in self, so you dont have to pass in self when you call the function on the object. Whenever you are referencing variables that belong to the object, you must put <code>self.</code> before the variable like in the changeSpeed function. Also, keep in mind that there are two underscores on each side of the init keyword not one. A constructor for the airplane class would look like this:</p>
 <pre>def __init__(self, top, current, name):
-    self.topSpeed = topSpeed
-    self.current = current
-    self.name = name
+        self.topSpeed = top
+        self.current = current
+        self.name = name
 </pre>
 	<p>This will take in top, current, and name as parameters, and then set the variables that belong to the airplane object equal to these parameters. This allows you to create unique airplane objects. You would initialize an object of this type like this:</p>
 <pre>airplane1 = Airplane(570, 0, “Boeing 747”)</pre>
+            
+    <p>So the final code for the Airplane class looks like this:</p>
+    <pre>class Airplane:
+    topSpeed = 200
+    currentSpeed = 0
+    name = "Spruce Goose"
+
+    def __init__(self, top, current, name):
+        self.topSpeed = top
+        self.current = current
+        self.name = name
+
+    def takeOff(self):
+        print("We are taking off now")
+    def changeSpeed(self, speedChange):
+        self.currentSpeed += speedChange
+        if self.currentSpeed > self.topSpeed:
+            self.currentSpeed = self.topSpeed
+    def land(self):
+        print("We are landing")</pre>
+            
+        <h3>Calling Functions</h3>
+        <p>You can now call a functions on the object like this:</p>
+        <pre>airplane1.takeOff()
+airplane1.changeSpeed(200)
+airplane1.land()</pre>
 
 
         
